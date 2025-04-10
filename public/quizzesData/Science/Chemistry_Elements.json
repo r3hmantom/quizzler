@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the chemical symbol for gold?",
+    "a": "Go",
+    "b": "Gd",
+    "c": "Au",
+    "d": "Ag",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Which element has the atomic number 1?",
+    "a": "Helium",
+    "b": "Hydrogen",
+    "c": "Carbon",
+    "d": "Oxygen",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which of the following is a noble gas?",
+    "a": "Nitrogen",
+    "b": "Chlorine",
+    "c": "Neon",
+    "d": "Sodium",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "What is the most abundant element in Earth's atmosphere?",
+    "a": "Oxygen",
+    "b": "Carbon dioxide",
+    "c": "Hydrogen",
+    "d": "Nitrogen",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "Which element is essential for all organic compounds?",
+    "a": "Carbon",
+    "b": "Nitrogen",
+    "c": "Oxygen",
+    "d": "Hydrogen",
+    "correctAnswer": "a"
+  }
+] 

@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the formula for the area of a circle?",
+    "a": "2πr",
+    "b": "πr²",
+    "c": "4πr²",
+    "d": "πd",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is the sum of interior angles in a triangle?",
+    "a": "90°",
+    "b": "180°",
+    "c": "270°",
+    "d": "360°",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which of the following is true for a right triangle?",
+    "a": "All sides are equal",
+    "b": "All angles are equal",
+    "c": "One angle is 90°",
+    "d": "The perimeter is always even",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "What is the Pythagorean theorem?",
+    "a": "a² + b² = c²",
+    "b": "a + b = c",
+    "c": "a × b = c",
+    "d": "a/b = c",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "What is the formula for the volume of a cylinder?",
+    "a": "πr²",
+    "b": "2πr + 2h",
+    "c": "πr²h",
+    "d": "2πrh",
+    "correctAnswer": "c"
+  }
+] 

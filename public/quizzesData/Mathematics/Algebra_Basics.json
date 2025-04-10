@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the value of x in the equation 2x + 5 = 15?",
+    "a": "5",
+    "b": "10",
+    "c": "7.5",
+    "d": "6",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "Which of the following is a quadratic equation?",
+    "a": "y = 2x + 1",
+    "b": "y = x² + 3x - 2",
+    "c": "y = 3/x",
+    "d": "y = 2^x",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "How do you factor x² - 9?",
+    "a": "(x - 3)(x - 3)",
+    "b": "(x + 3)(x - 3)",
+    "c": "(x + 9)(x - 1)",
+    "d": "It cannot be factored",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "If f(x) = 2x + 3, what is f(4)?",
+    "a": "8",
+    "b": "11",
+    "c": "14",
+    "d": "7",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is the slope of the line y = 3x - 7?",
+    "a": "-7",
+    "b": "3",
+    "c": "-3",
+    "d": "7",
+    "correctAnswer": "b"
+  }
+] 

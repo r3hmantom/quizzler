@@ -3,6 +3,7 @@ import { useQuiz } from './hooks/useQuiz'
 import JsonInput from './components/JsonInput'
 import Question from './components/Question'
 import Results from './components/Results'
+import QuizBrowser from './components/QuizBrowser'
 import { QuizQuestion, AnswerOption } from './types'
 import { clearQuizState } from './utils/quizUtils'
 import './App.css'
@@ -18,6 +19,8 @@ function App() {
   
   const [savedQuizzes, setSavedQuizzes] = useState<{ name: string, questions: QuizQuestion[] }[]>([]);
   const [showSavedQuizzes, setShowSavedQuizzes] = useState(false);
+  const [showJsonInput, setShowJsonInput] = useState(false);
+  const [showQuizBrowser, setShowQuizBrowser] = useState(true);
 
   // Load saved quizzes on mount
   useEffect(() => {
@@ -75,6 +78,8 @@ function App() {
   const onRestart = () => {
     clearQuizState();
     resetQuiz();
+    setShowQuizBrowser(true);
+    setShowJsonInput(false);
   };
 
   // Save current quiz
@@ -96,6 +101,8 @@ function App() {
     if (index >= 0 && index < savedQuizzes.length) {
       startQuiz(savedQuizzes[index].questions);
       setShowSavedQuizzes(false);
+      setShowQuizBrowser(false);
+      setShowJsonInput(false);
     }
   };
 
@@ -106,22 +113,89 @@ function App() {
     localStorage.setItem('quizzler-saved-quizzes', JSON.stringify(updatedQuizzes));
   };
 
+  // Handle starting a new quiz
+  const handleStartNewQuiz = () => {
+    setShowJsonInput(true);
+    setShowQuizBrowser(false);
+  };
+
+  // Handle starting a quiz from the browser
+  const handleStartBrowserQuiz = (questions: QuizQuestion[]) => {
+    startQuiz(questions);
+    setShowQuizBrowser(false);
+  };
+
   // Render the appropriate component based on quiz state
   const renderContent = () => {
     if (!state.hasStarted) {
-      // Show JSON input if quiz hasn't started
-      return (
-        <>
+      if (showQuizBrowser) {
+        // Show quiz browser
+        return (
+          <>
+            <div className="top-bar">
+              <button 
+                className="neu-button secondary"
+                onClick={handleStartNewQuiz}
+                style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}
+              >
+                Create Custom Quiz
+              </button>
+              
+              {savedQuizzes.length > 0 && (
+                <button 
+                  className="neu-button secondary"
+                  onClick={() => {
+                    setShowSavedQuizzes(true);
+                    setShowQuizBrowser(false);
+                  }}
+                  style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', marginLeft: '0.5rem' }}
+                >
+                  View My Quizzes
+                </button>
+              )}
+            </div>
+            <QuizBrowser onStartQuiz={handleStartBrowserQuiz} />
+          </>
+        );
+      } else if (showJsonInput) {
+        // Show JSON input for creating a custom quiz
+        return (
+          <JsonInput 
+            onStart={(questions) => {
+              startQuiz(questions);
+              setShowJsonInput(false);
+            }} 
+            savedQuizzes={savedQuizzes}
+            onLoadSavedQuiz={loadSavedQuiz}
+            onDeleteSavedQuiz={deleteSavedQuiz}
+            showSavedQuizzes={showSavedQuizzes}
+            setShowSavedQuizzes={(show) => {
+              setShowSavedQuizzes(show);
+              if (!show && !state.hasStarted) {
+                setShowQuizBrowser(true);
+                setShowJsonInput(false);
+              }
+            }}
+          />
+        );
+      } else if (showSavedQuizzes) {
+        // Show saved quizzes
+        return (
           <JsonInput 
             onStart={startQuiz} 
             savedQuizzes={savedQuizzes}
             onLoadSavedQuiz={loadSavedQuiz}
             onDeleteSavedQuiz={deleteSavedQuiz}
-            showSavedQuizzes={showSavedQuizzes}
-            setShowSavedQuizzes={setShowSavedQuizzes}
+            showSavedQuizzes={true}
+            setShowSavedQuizzes={(show) => {
+              setShowSavedQuizzes(show);
+              if (!show && !state.hasStarted) {
+                setShowQuizBrowser(true);
+              }
+            }}
           />
-        </>
-      );
+        );
+      }
     }
 
     if (state.isComplete) {
