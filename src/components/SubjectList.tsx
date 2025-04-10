@@ -86,7 +86,7 @@ function getSubjectColor(subjectName: string): string {
   switch (subjectName) {
     case 'Mathematics':
       return '#ffde59'; // Yellow
-    case 'Science':
+    case 'Leadership':
       return '#64c2a6'; // Teal
     case 'History':
       return '#ff914d'; // Orange
