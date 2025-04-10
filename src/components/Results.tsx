@@ -13,8 +13,12 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz }
   const [showSaveForm, setShowSaveForm] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   
-  // Calculate percentage score
+  // Calculate percentage score - based on total unique questions
   const percentage = Math.round((score / totalQuestions) * 100);
+  
+  // Calculate correct and wrong answers
+  const correctAnswers = score;
+  const wrongAnswers = totalQuestions - score;
   
   // Function to get message based on score percentage
   const getMessage = () => {
@@ -70,6 +74,14 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz }
         <p className="mb-2" style={{ fontSize: '1.5rem', fontWeight: 700 }}>
           Your Score: {score}/{totalQuestions} ({percentage}%)
         </p>
+        <div className="mb-4" style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
+          <p style={{ fontSize: '1.1rem', color: 'var(--correct)', fontWeight: 500 }}>
+            Correct: {correctAnswers}
+          </p>
+          <p style={{ fontSize: '1.1rem', color: 'var(--incorrect)', fontWeight: 500 }}>
+            Wrong: {wrongAnswers}
+          </p>
+        </div>
         <p className="mb-4" style={{ fontSize: '1.2rem' }}>
           {getMessage()}
         </p>

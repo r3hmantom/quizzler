@@ -101,7 +101,7 @@ export default function QuizList({ subject, onBack, onSelectQuiz }: QuizListProp
 // Function to get a color based on subject name (same as in SubjectList)
 function getSubjectColor(subjectName: string): string {
   switch (subjectName) {
-    case 'Mathematics':
+    case 'Leadership':
       return '#ffde59'; // Yellow
     case 'Science':
       return '#64c2a6'; // Teal

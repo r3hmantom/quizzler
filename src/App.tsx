@@ -64,13 +64,32 @@ function App() {
     if (state.currentQuestionIndex < state.questions.length - 1) {
       // Move to next question
       const nextIndex = state.currentQuestionIndex + 1;
-      startQuiz([...state.questions], nextIndex);
+      startQuiz(
+        [...state.questions], 
+        nextIndex, 
+        state.score, 
+        false, 
+        state.totalQuestions, 
+        state.incorrectQuestions
+      );
     } else if (state.incorrectQuestions.length > 0) {
       // Move to incorrect questions
-      startQuiz(state.incorrectQuestions, 0, state.score);
+      startQuiz(
+        state.incorrectQuestions, 
+        0, 
+        state.score, 
+        false, 
+        state.totalQuestions
+      );
     } else {
       // Complete the quiz
-      startQuiz([...state.questions], state.questions.length, state.score, true);
+      startQuiz(
+        [...state.questions], 
+        state.questions.length, 
+        state.score, 
+        true, 
+        state.totalQuestions
+      );
     }
   };
 

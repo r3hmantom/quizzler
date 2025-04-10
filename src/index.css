@@ -180,8 +180,8 @@ p {
 
 .option-label {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   line-height: 2rem;
   text-align: center;
   margin-right: 1rem;

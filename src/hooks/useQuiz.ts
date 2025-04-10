@@ -34,15 +34,17 @@ export function useQuiz() {
     questions: QuizQuestion[], 
     startIndex: number = 0, 
     initialScore: number = 0, 
-    isComplete: boolean = false
+    isComplete: boolean = false,
+    totalQuestionsCount?: number,
+    incorrectQuestionsOverride?: QuizQuestion[]
   ) => {
     const shuffledQuestions = startIndex === 0 ? shuffleArray(questions) : questions;
     setState({
       questions: shuffledQuestions,
       currentQuestionIndex: startIndex,
-      incorrectQuestions: [],
+      incorrectQuestions: incorrectQuestionsOverride || [],
       score: initialScore,
-      totalQuestions: questions.length,
+      totalQuestions: totalQuestionsCount || questions.length,
       isComplete: isComplete,
       hasStarted: true
     });
