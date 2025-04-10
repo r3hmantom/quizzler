@@ -22,7 +22,7 @@ export async function getSubjects(): Promise<SubjectInfo[]> {
 
     // We're simulating a directory listing here
     // In a real app with a server, you'd get this from an API endpoint
-    return [{ name: "Leadership", path: "/quizzesData/Leadership/" }];
+    return [{ name: "Leadership", path: "/quizzesData/leadership/" }];
   } catch (error) {
     console.error("Error getting subjects:", error);
     return [];
@@ -45,25 +45,25 @@ export async function getQuizzesBySubject(
       quizzes.push(
         {
           title: "Contingency Models 1",
-          path: `/quizzesData/Leadership/slides_1.json`,
+          path: `/quizzesData/leadership/slides_1.json`,
           fileName: "slides_1.json",
           subject: "Leadership",
         },
         {
           title: "Contingency Models 2",
-          path: `/quizzesData/Leadership/slides_2.json`,
+          path: `/quizzesData/leadership/slides_2.json`,
           fileName: "slides_2.json",
           subject: "Leadership",
         },
         {
           title: "Leadership as an Individual Fundamentals",
-          path: `/quizzesData/Leadership/slides_3.json`,
+          path: `/quizzesData/leadership/slides_3.json`,
           fileName: "slides_3.json",
           subject: "Leadership",
         },
         {
           title: "Powers in Leadership",
-          path: `/quizzesData/Leadership/slides_4.json`,
+          path: `/quizzesData/leadership/slides_4.json`,
           fileName: "slides_4.json",
           subject: "Leadership",
         }
