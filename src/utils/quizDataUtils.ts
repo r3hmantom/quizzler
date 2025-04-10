@@ -1,4 +1,9 @@
 import { QuizQuestion } from "../types";
+// Import slides data directly
+import slides1 from "../data/slides_1.json";
+import slides2 from "../data/slides_2.json";
+import slides3 from "../data/slides_3.json";
+import slides4 from "../data/slides_4.json";
 
 export interface SubjectInfo {
   name: string;
@@ -12,17 +17,11 @@ export interface QuizInfo {
   subject: string;
 }
 
-// Get all available subjects from the quizzesData directory
+// Get all available subjects from the data directory
 export async function getSubjects(): Promise<SubjectInfo[]> {
   try {
-    const response = await fetch("/quizzesdata/");
-    if (!response.ok) {
-      throw new Error("Failed to fetch subjects");
-    }
-
-    // We're simulating a directory listing here
-    // In a real app with a server, you'd get this from an API endpoint
-    return [{ name: "Leadership", path: "/quizzesdata/leadership/" }];
+    // We're providing static subject data
+    return [{ name: "Leadership", path: "leadership" }];
   } catch (error) {
     console.error("Error getting subjects:", error);
     return [];
@@ -36,34 +35,33 @@ export async function getQuizzesBySubject(
   try {
     // Format subject name for path
     const formattedSubject = subject.replace(/\s+/g, "_");
-
+    
     const quizzes: QuizInfo[] = [];
 
-    // Hardcoded quiz info for each subject
-    // In a real app, this would be fetched from the server
+    // Hardcoded quiz info based on imported data files
     if (formattedSubject === "Leadership") {
       quizzes.push(
         {
           title: "Contingency Models 1",
-          path: `/quizzesdata/leadership/slides_1.json`,
+          path: "slides_1",
           fileName: "slides_1.json",
           subject: "Leadership",
         },
         {
           title: "Contingency Models 2",
-          path: `/quizzesdata/leadership/slides_2.json`,
+          path: "slides_2",
           fileName: "slides_2.json",
           subject: "Leadership",
         },
         {
           title: "Leadership as an Individual Fundamentals",
-          path: `/quizzesdata/leadership/slides_3.json`,
+          path: "slides_3",
           fileName: "slides_3.json",
           subject: "Leadership",
         },
         {
           title: "Powers in Leadership",
-          path: `/quizzesdata/leadership/slides_4.json`,
+          path: "slides_4",
           fileName: "slides_4.json",
           subject: "Leadership",
         }
@@ -77,15 +75,29 @@ export async function getQuizzesBySubject(
   }
 }
 
-// Load quiz questions from a specific path
-export async function   loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
+// Load quiz questions based on the path identifier
+export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
   try {
-    const response = await fetch(path);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch quiz at ${path}`);
+    // Map the path to the appropriate imported JSON data
+    let questions: QuizQuestion[] = [];
+    
+    switch (path) {
+      case "slides_1":
+        questions = slides1 as QuizQuestion[];
+        break;
+      case "slides_2":
+        questions = slides2 as QuizQuestion[];
+        break;
+      case "slides_3":
+        questions = slides3 as QuizQuestion[];
+        break;
+      case "slides_4":
+        questions = slides4 as QuizQuestion[];
+        break;
+      default:
+        throw new Error(`No quiz data found for path: ${path}`);
     }
-
-    const questions: QuizQuestion[] = await response.json();
+    
     return questions;
   } catch (error) {
     console.error(`Error loading quiz from ${path}:`, error);
