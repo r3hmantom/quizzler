@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { SubjectInfo, QuizInfo, getQuizzesBySubject } from '../utils/quizDataUtils';
+import { SubjectInfo, QuizInfo, getQuizzesBySubject, getSubjectColor } from '../utils/quizDataUtils';
 
 interface QuizListProps {
   subject: SubjectInfo;
@@ -96,18 +96,4 @@ export default function QuizList({ subject, onBack, onSelectQuiz }: QuizListProp
       )}
     </div>
   );
-}
-
-// Function to get a color based on subject name (same as in SubjectList)
-function getSubjectColor(subjectName: string): string {
-  switch (subjectName) {
-    case 'Leadership':
-      return '#ffde59'; // Yellow
-    case 'Science':
-      return '#64c2a6'; // Teal
-    case 'History':
-      return '#ff914d'; // Orange
-    default:
-      return 'white';
-  }
 } 

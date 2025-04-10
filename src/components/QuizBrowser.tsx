@@ -25,12 +25,15 @@ export default function QuizBrowser({ onStartQuiz }: QuizBrowserProps) {
   const handleSelectQuiz = async (quiz: QuizInfo) => {
     try {
       setLoading(true);
+      console.log(`Loading quiz: ${quiz.title} with path: ${quiz.path}`);
       
       // Load the quiz questions
       const questions = await loadQuizQuestions(quiz.path);
+      console.log(`Loaded ${questions.length} questions from quiz:`, quiz.path);
       
       if (questions.length === 0) {
-        setError(`No questions found in quiz "${quiz.title}".`);
+        setError(`No questions found in quiz "${quiz.title}". Please check the file format and structure.`);
+        console.error(`No questions found in quiz file: ${quiz.path}`);
         return;
       }
       
@@ -38,8 +41,8 @@ export default function QuizBrowser({ onStartQuiz }: QuizBrowserProps) {
       onStartQuiz(questions);
       
     } catch (err) {
-      setError(`Failed to load quiz "${quiz.title}". Please try again.`);
       console.error(`Error loading quiz ${quiz.title}:`, err);
+      setError(`Failed to load quiz "${quiz.title}". Please try again.`);
     } finally {
       setLoading(false);
     }

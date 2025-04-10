@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { SubjectInfo, getSubjects } from '../utils/quizDataUtils';
+import { SubjectInfo, getSubjects, getSubjectColor } from '../utils/quizDataUtils';
 
 interface SubjectListProps {
   onSelectSubject: (subject: SubjectInfo) => void;
@@ -72,25 +72,11 @@ export default function SubjectList({ onSelectSubject }: SubjectListProps) {
               backgroundColor: getSubjectColor(subject.name)
             }}>
               <h2 style={{ marginBottom: '0.5rem' }}>{subject.name}</h2>
-              <p>Explore {subject.name.toLowerCase()} quizzes</p>
+              <p>{subject.description || `Explore ${subject.name.toLowerCase()} quizzes`}</p>
             </div>
           </motion.div>
         ))}
       </div>
     </div>
   );
-}
-
-// Function to get a color based on subject name
-function getSubjectColor(subjectName: string): string {
-  switch (subjectName) {
-    case 'Mathematics':
-      return '#ffde59'; // Yellow
-    case 'Leadership':
-      return '#64c2a6'; // Teal
-    case 'History':
-      return '#ff914d'; // Orange
-    default:
-      return 'white';
-  }
 } 

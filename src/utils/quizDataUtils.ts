@@ -1,13 +1,11 @@
 import { QuizQuestion } from "../types";
-// Import slides data directly
-import slides1 from "../data/slides_1.json";
-import slides2 from "../data/slides_2.json";
-import slides3 from "../data/slides_3.json";
-import slides4 from "../data/slides_4.json";
+import { subjects, SubjectConfig } from "../data/config";
 
 export interface SubjectInfo {
   name: string;
   path: string;
+  color: string;
+  description?: string;
 }
 
 export interface QuizInfo {
@@ -17,55 +15,62 @@ export interface QuizInfo {
   subject: string;
 }
 
-// Get all available subjects from the data directory
+// Get all available subjects from the configuration
 export async function getSubjects(): Promise<SubjectInfo[]> {
   try {
-    // We're providing static subject data
-    return [{ name: "Leadership", path: "leadership" }];
+    return subjects;
   } catch (error) {
     console.error("Error getting subjects:", error);
     return [];
   }
 }
 
-// Get all quizzes for a specific subject
-export async function getQuizzesBySubject(
-  subject: string
-): Promise<QuizInfo[]> {
-  try {
-    // Format subject name for path
-    const formattedSubject = subject.replace(/\s+/g, "_");
-    
-    const quizzes: QuizInfo[] = [];
+// Get subject by name
+export function getSubjectByName(name: string): SubjectConfig | undefined {
+  return subjects.find(subject => subject.name === name);
+}
 
-    // Hardcoded quiz info based on imported data files
-    if (formattedSubject === "Leadership") {
-      quizzes.push(
-        {
-          title: "Contingency Models 1",
-          path: "slides_1",
-          fileName: "slides_1.json",
-          subject: "Leadership",
-        },
-        {
-          title: "Contingency Models 2",
-          path: "slides_2",
-          fileName: "slides_2.json",
-          subject: "Leadership",
-        },
-        {
-          title: "Leadership as an Individual Fundamentals",
-          path: "slides_3",
-          fileName: "slides_3.json",
-          subject: "Leadership",
-        },
-        {
-          title: "Powers in Leadership",
-          path: "slides_4",
-          fileName: "slides_4.json",
-          subject: "Leadership",
-        }
-      );
+// Get all quizzes for a specific subject
+export async function getQuizzesBySubject(subject: string): Promise<QuizInfo[]> {
+  try {
+    // Format subject name for path if needed
+    const subjectInfo = getSubjectByName(subject);
+    if (!subjectInfo) {
+      throw new Error(`Subject "${subject}" not found`);
+    }
+    
+    const formattedSubject = subjectInfo.path.toLowerCase();
+    const quizzes: QuizInfo[] = [];
+    
+    // Dynamically import all files from the subject directory
+    const context = import.meta.glob("../data/**/*.json", { eager: true });
+    
+    // Debug which files were found
+    console.log("Found files:", Object.keys(context));
+    
+    // Filter files that match the subject path
+    for (const fullPath of Object.keys(context)) {
+      // Make sure this is a file in the correct subject directory
+      if (fullPath.includes(`/${formattedSubject}/`)) {
+        // Extract filename from the path
+        const pathParts = fullPath.split("/");
+        const fileName = pathParts[pathParts.length - 1];
+        const title = formatTitle(fileName);
+        
+        // The path we want is the part after ../data/ but without the .json extension
+        const relativePath = fullPath
+          .substring(fullPath.indexOf("../data/") + "../data/".length)
+          .replace(/\.json$/, "");
+        
+        console.log(`Adding quiz: "${title}" with path: "${relativePath}" from full path: "${fullPath}"`);
+        
+        quizzes.push({
+          title,
+          path: relativePath,
+          fileName,
+          subject: subjectInfo.name
+        });
+      }
     }
 
     return quizzes;
@@ -78,29 +83,55 @@ export async function getQuizzesBySubject(
 // Load quiz questions based on the path identifier
 export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
   try {
-    // Map the path to the appropriate imported JSON data
-    let questions: QuizQuestion[] = [];
+    console.log(`Attempting to load quiz from path: ${path}`);
     
-    switch (path) {
-      case "slides_1":
-        questions = slides1 as QuizQuestion[];
+    // Use dynamic import with the full path
+    const modules = import.meta.glob("../data/**/*.json", { eager: true });
+    
+    // Construct multiple possible paths to try
+    const possiblePaths = [
+      `../data/${path}.json`,         // Direct path
+      `../data/leadership/${path}.json`,  // Try with leadership prefix
+      Object.keys(modules).find(key => key.endsWith(`/${path}.json`)) // Find by filename
+    ].filter(Boolean); // Remove any undefined entries
+    
+    console.log("Trying paths:", possiblePaths);
+    
+    // Try each path
+    let module: any = null;
+    let usedPath: string | null = null;
+    
+    for (const tryPath of possiblePaths) {
+      if (tryPath && tryPath in modules) {
+        module = modules[tryPath];
+        usedPath = tryPath;
         break;
-      case "slides_2":
-        questions = slides2 as QuizQuestion[];
-        break;
-      case "slides_3":
-        questions = slides3 as QuizQuestion[];
-        break;
-      case "slides_4":
-        questions = slides4 as QuizQuestion[];
-        break;
-      default:
-        throw new Error(`No quiz data found for path: ${path}`);
+      }
     }
     
-    return questions;
+    if (!module) {
+      console.error(`No module found for quiz: ${path}`);
+      console.error("Available modules:", Object.keys(modules));
+      return [];
+    }
+    
+    console.log(`Found module at: ${usedPath}`);
+    
+    // Handle both default exports and direct exports
+    const questions = module.default || module as unknown as QuizQuestion[];
+    
+    console.log(`Loaded data type:`, typeof questions, Array.isArray(questions), 
+                `Length: ${Array.isArray(questions) ? questions.length : 'not an array'}`);
+    
+    if (!Array.isArray(questions) || questions.length === 0) {
+      console.error(`No valid questions array found in ${path}. Data:`, questions);
+      return [];
+    }
+    
+    return questions as QuizQuestion[];
   } catch (error) {
     console.error(`Error loading quiz from ${path}:`, error);
+    console.trace();
     return [];
   }
 }
@@ -109,4 +140,10 @@ export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
 export function formatTitle(fileName: string): string {
   // Remove .json extension and replace underscores with spaces
   return fileName.replace(".json", "").replace(/_/g, " ");
+}
+
+// Get color for a subject
+export function getSubjectColor(subjectName: string): string {
+  const subject = getSubjectByName(subjectName);
+  return subject?.color || "white";
 }
