@@ -15,7 +15,7 @@ export interface QuizInfo {
 // Get all available subjects from the quizzesData directory
 export async function getSubjects(): Promise<SubjectInfo[]> {
   try {
-    const response = await fetch("/quizzesData/");
+    const response = await fetch("/quizzesdata/");
     if (!response.ok) {
       throw new Error("Failed to fetch subjects");
     }
