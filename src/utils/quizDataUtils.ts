@@ -45,25 +45,25 @@ export async function getQuizzesBySubject(
       quizzes.push(
         {
           title: "Contingency Models 1",
-          path: `/quizzesData/Mathematics/Contingency.json`,
+          path: `/quizzesData/Leadership/slides_1.json`,
           fileName: "slides_1.json",
           subject: "Leadership",
         },
         {
           title: "Contingency Models 2",
-          path: `/quizzesData/Mathematics/slides_2.json`,
+          path: `/quizzesData/Leadership/slides_2.json`,
           fileName: "slides_2.json",
           subject: "Leadership",
         },
         {
           title: "Leadership as an Individual Fundamentals",
-          path: `/quizzesData/Mathematics/slides_3.json`,
+          path: `/quizzesData/Leadership/slides_3.json`,
           fileName: "slides_3.json",
           subject: "Leadership",
         },
         {
           title: "Powers in Leadership",
-          path: `/quizzesData/Mathematics/slides_4.json`,
+          path: `/quizzesData/Leadership/slides_4.json`,
           fileName: "slides_4.json",
           subject: "Leadership",
         }
@@ -78,7 +78,7 @@ export async function getQuizzesBySubject(
 }
 
 // Load quiz questions from a specific path
-export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
+export async function   loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
   try {
     const response = await fetch(path);
     if (!response.ok) {
