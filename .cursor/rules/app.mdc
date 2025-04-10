@@ -1,0 +1,75 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+I want you to act as a UI/UX design and frontend development expert. Your goal is to generate a web application that functions as a quiz.
+
+The application should:
+
+1.  **Accept JSON Input:** The user will provide quiz questions in the following JSON format:
+
+    ```json
+    [
+      {
+        "question": "...",
+        "a": "...",
+        "b": "...",
+        "c": "...",
+        "d": "...",
+        "correctAnswer": "..."
+      },
+      {
+        "question": "...",
+        "a": "...",
+        "b": "...",
+        "c": "...",
+        "d": "...",
+        "correctAnswer": "..."
+      },
+      // ... more questions
+    ]
+    ```
+
+2.  **Generate a UI Quiz:** Based on the provided JSON, the application should dynamically render an interactive quiz. Each question should be displayed clearly along with its multiple-choice options (a, b, c, d).
+
+3.  **Implement Neubrutalism Design:** The user interface must adhere to the principles of Neubrutalism. This includes:
+    * Bold typography with clear hierarchy.
+    * Sharp edges and corners.
+    * Minimalist aesthetic with a focus on functionality.
+    * Use of contrasting, potentially slightly desaturated, theme colors. (Suggest specific color palettes or allow for user customization if feasible within MVP).
+    * Visible, slightly exaggerated UI elements like buttons and containers.
+
+4.  **Employ Best Practices for User Engagement:** The quiz should be designed to keep users engaged. Consider incorporating elements like:
+    * Clear progress indication (e.g., "Question 1 of 10").
+    * Smooth transitions between questions.
+    * Visually distinct highlighting of selected answers.
+
+5.  **Focus Solely on Quiz Functionality (MVP):** The application should *only* handle the quiz taking process. Do not include any unrelated features like user accounts, leaderboards, question editing, external data fetching, etc.
+
+6.  **Utilize Local Storage:** Quiz progress and potentially the set of questions (after initial input) should be stored in the browser's local storage. This ensures that if the user refreshes the page, their progress is (at least partially) retained.
+
+7.  **Provide Dopamine-Inducing Feedback for Correct Answers:** When the user selects the correct answer, the UI should provide immediate and visually satisfying feedback. This could involve:
+    * A noticeable (but not distracting) animation.
+    * A positive sound effect (optional, but consider its impact).
+    * A clear visual indication of correctness (e.g., a green highlight, a checkmark).
+    * A smooth transition to the next question after a brief delay.
+
+8.  **Implement Question Re-Attempt for Incorrect Answers:** If the user selects an incorrect answer:
+    * Provide clear visual feedback indicating the error (e.g., a red highlight, an "Incorrect" message).
+    * After incorrect submission (and potentially showing the correct answer briefly - consider this as an option), the incorrectly answered question should be added to a pool of questions to be presented again later in a randomized order. This allows the user to revisit and learn from their mistakes.
+
+9.  **Ensure Clean and Smooth Animated UI:** All interactions and transitions within the quiz (e.g., moving to the next question, feedback on answers) should be smooth and visually appealing, following best practices for web animations (e.g., using CSS transitions and animations where appropriate for performance).
+
+10. **Duolingo-Inspired Feel (Optional but desirable):** While maintaining the Neubrutalism aesthetic, consider incorporating subtle UI/UX patterns inspired by Duolingo's engaging learning experience (e.g., the feeling of progression, clear visual cues for correctness/incorrectness).
+
+**Based on these requirements, generate a comprehensive prompt that a UI/UX designer and a frontend developer could use to build this quiz application.** The prompt should be detailed enough to guide the design and development process, covering aspects like:
+
+* **Overall application flow:** How the user interacts with the application from inputting the JSON to completing the quiz.
+* **Specific UI elements and their behavior:** How questions, options, and feedback mechanisms should be displayed and function.
+* **Neubrutalism design guidelines:** Specific recommendations for typography, color palette, element styling, and layout.
+* **User engagement strategies:** How the UI and interactions contribute to a positive learning experience.
+* **Local storage implementation details:** How and what data should be stored locally.
+* **Feedback mechanism for correct/incorrect answers:** Detailed description of the visual and interactive elements.
+* **Question re-attempt logic:** How incorrectly answered questions are managed and re-presented.
+* **Animation and transition considerations:** Emphasis on smoothness and performance.
