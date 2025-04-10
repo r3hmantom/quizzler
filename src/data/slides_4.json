@@ -1,73 +1,73 @@
 [
     {
-      "question": "**Transformational leadership** is primarily focused on:",
+      "question": "Transformational leadership is primarily focused on:",
       "a": "Maintaining organizational stability through strict control.",
       "b": "Building alliances to achieve collective goals.",
-      "c": "**Bringing significant change to both followers and the organization.** [1]",
+      "c": "Bringing significant change to both followers and the organization.",
       "d": "Inspiring followers through the leader's powerful personal presence.",
       "correctAnswer": "c"
     },
     {
-      "question": "Which of the following is a key characteristic of **charismatic leadership**?",
+      "question": "Which of the following is a key characteristic of charismatic leadership?",
       "a": "A strong focus on organizational rules and procedures.",
-      "b": "**The ability to ignite followers' energy and commitment.** [2]",
+      "b": "The ability to ignite followers' energy and commitment.",
       "c": "A willingness to use any means necessary to preserve organizational power.",
       "d": "Emphasizing rational persuasion and logical arguments.",
       "correctAnswer": "b"
     },
     {
-      "question": "**Coalitional leadership** emphasizes:",
+      "question": "Coalitional leadership emphasizes:",
       "a": "The leader's formal authority and position within the hierarchy.",
       "b": "The leader's specialized knowledge and skills.",
-      "c": "**Building alliances and positive relationships to achieve collective goals.** [3, 4]",
+      "c": "Building alliances and positive relationships to achieve collective goals.",
       "d": "The leader's ability to provide incentives and rewards.",
       "correctAnswer": "c"
     },
     {
-      "question": "A potential disadvantage of **coalitional leadership** is:",
+      "question": "A potential disadvantage of coalitional leadership is:",
       "a": "Reduced power and difficulty in goal accomplishment.",
       "b": "Lack of focus on innovation and change.",
-      "c": "**The time and effort required to build and maintain coalitions.** [4]",
+      "c": "The time and effort required to build and maintain coalitions.",
       "d": "Increased risk of ethical concerns and negative impacts on culture.",
       "correctAnswer": "c"
     },
     {
-      "question": "**Machiavellian leaders** are primarily characterized by their:",
+      "question": "Machiavellian leaders are primarily characterized by their:",
       "a": "Emphasis on inspiring followers to transcend self-interests.",
       "b": "Commitment to ethical principles above all else.",
-      "c": "**Willingness to use any means necessary to preserve and protect the organization.** [5]",
+      "c": "Willingness to use any means necessary to preserve and protect the organization.",
       "d": "Focus on developing followers into leaders.",
       "correctAnswer": "c"
     },
     {
-      "question": "**Legitimate power** is derived from:",
+      "question": "Legitimate power is derived from:",
       "a": "A leader's personal charisma and ability to inspire.",
       "b": "The admiration and respect followers have for a leader's personality traits.",
-      "c": "**A person's formal position or title within an organization.** [6]",
+      "c": "A person's formal position or title within an organization.",
       "d": "A leader's specialized knowledge or skills.",
       "correctAnswer": "c"
     },
     {
-      "question": "**Reward power** involves:",
+      "question": "Reward power involves:",
       "a": "The ability to impose penalties or punishments.",
-      "b": "**The ability to provide incentives or rewards.** [7]",
+      "b": "The ability to provide incentives or rewards.",
       "c": "Influence based on a leader's expertise.",
       "d": "Authority granted by an organizational role.",
       "correctAnswer": "b"
     },
     {
-      "question": "**Referent power** is based on:",
+      "question": "Referent power is based on:",
       "a": "A leader's formal authority.",
       "b": "A leader's ability to control resources.",
       "c": "A leader's knowledge and skills.",
-      "d": "**The admiration and respect followers have for a leader's personality traits.** [8]",
+      "d": "The admiration and respect followers have for a leader's personality traits.",
       "correctAnswer": "d"
     },
     {
       "question": "Followers responding with enthusiastic support to a leader's vision are demonstrating:",
-      "a": "**Commitment**, often elicited by soft power. [8]",
-      "b": "Compliance, often resulting from hard power. [8]",
-      "c": "Resistance, actively opposing the leader's directives. [8]",
+      "a": "Commitment, often elicited by soft power.",
+      "b": "Compliance, often resulting from hard power.",
+      "c": "Resistance, actively opposing the leader's directives.",
       "d": "A neutral reaction to the leader's influence.",
       "correctAnswer": "a"
     },
@@ -75,7 +75,7 @@
       "question": "Which of the following leadership styles is described as being vital for organizations in a world of continuous change?",
       "a": "Machiavellian Leadership",
       "b": "Coalitional Leadership",
-      "c": "**Transformational Leadership** [1]",
+      "c": "Transformational Leadership",
       "d": "Charismatic Leadership",
       "correctAnswer": "c"
     },
@@ -83,14 +83,14 @@
       "question": "Richard Branson and Steve Jobs are given as examples of:",
       "a": "Effective Coalitional Leaders.",
       "b": "Ethical Machiavellian Leaders.",
-      "c": "**Visionary Charismatic Leaders.** [9]",
+      "c": "Visionary Charismatic Leaders.",
       "d": "Successful Transformational Leaders focused solely on internal change.",
       "correctAnswer": "c"
     },
     {
       "question": "A key difference highlighted between the four influential leadership styles is their approach to:",
       "a": "Budgeting and financial control.",
-      "b": "**Grand vision and communication.** [3]",
+      "b": "Grand vision and communication.",
       "c": "Operational efficiency and process optimization.",
       "d": "Legal compliance and regulatory affairs.",
       "correctAnswer": "b"
