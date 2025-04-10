@@ -6,6 +6,7 @@ const initialState: QuizState = {
   questions: [],
   currentQuestionIndex: 0,
   incorrectQuestions: [],
+  problematicQuestions: [],
   score: 0,
   totalQuestions: 0,
   isComplete: false,
@@ -19,7 +20,11 @@ export function useQuiz() {
   useEffect(() => {
     const savedState = loadQuizState();
     if (savedState) {
-      setState(savedState);
+      // Ensure problematicQuestions exists
+      setState({
+        ...savedState,
+        problematicQuestions: savedState.problematicQuestions || []
+      });
     }
   }, []);
 
@@ -36,13 +41,15 @@ export function useQuiz() {
     initialScore: number = 0, 
     isComplete: boolean = false,
     totalQuestionsCount?: number,
-    incorrectQuestionsOverride?: QuizQuestion[]
+    incorrectQuestionsOverride?: QuizQuestion[],
+    problematicQuestionsOverride?: { question: QuizQuestion; incorrectCount: number }[]
   ) => {
     const shuffledQuestions = startIndex === 0 ? shuffleArray(questions) : questions;
     setState({
       questions: shuffledQuestions,
       currentQuestionIndex: startIndex,
       incorrectQuestions: incorrectQuestionsOverride || [],
+      problematicQuestions: problematicQuestionsOverride || [],
       score: initialScore,
       totalQuestions: totalQuestionsCount || questions.length,
       isComplete: isComplete,
@@ -80,10 +87,38 @@ export function useQuiz() {
         score: prev.score + 1
       }));
     } else {
-      setState(prev => ({
-        ...prev,
-        incorrectQuestions: [...prev.incorrectQuestions, currentQuestion]
-      }));
+      setState(prev => {
+        // Check if the question is already in incorrectQuestions
+        const isAlreadyIncorrect = prev.incorrectQuestions.some(q => 
+          q.question === currentQuestion.question
+        );
+        
+        // Update problematicQuestions
+        let updatedProblematicQuestions = [...prev.problematicQuestions];
+        const existingIndex = updatedProblematicQuestions.findIndex(
+          pq => pq.question.question === currentQuestion.question
+        );
+        
+        if (existingIndex >= 0) {
+          // Increment count for existing problematic question
+          updatedProblematicQuestions[existingIndex] = {
+            ...updatedProblematicQuestions[existingIndex],
+            incorrectCount: updatedProblematicQuestions[existingIndex].incorrectCount + 1
+          };
+        } else if (isAlreadyIncorrect) {
+          // Add as new problematic question if it's the second time incorrect
+          updatedProblematicQuestions.push({
+            question: currentQuestion,
+            incorrectCount: 2
+          });
+        }
+        
+        return {
+          ...prev,
+          incorrectQuestions: [...prev.incorrectQuestions, currentQuestion],
+          problematicQuestions: updatedProblematicQuestions
+        };
+      });
     }
 
     return { isCorrect };

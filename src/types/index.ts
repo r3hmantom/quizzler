@@ -11,6 +11,7 @@ export interface QuizState {
   questions: QuizQuestion[];
   currentQuestionIndex: number;
   incorrectQuestions: QuizQuestion[];
+  problematicQuestions: { question: QuizQuestion; incorrectCount: number }[];
   score: number;
   totalQuestions: number;
   isComplete: boolean;

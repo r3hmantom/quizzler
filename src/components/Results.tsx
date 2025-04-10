@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { QuizQuestion } from '../types';
 
 interface ResultsProps {
   score: number;
   totalQuestions: number;
   onRestart: () => void;
   onSaveQuiz: (name: string) => void;
+  problematicQuestions: { question: QuizQuestion; incorrectCount: number }[];
 }
 
-export default function Results({ score, totalQuestions, onRestart, onSaveQuiz }: ResultsProps) {
+export default function Results({ score, totalQuestions, onRestart, onSaveQuiz, problematicQuestions }: ResultsProps) {
   const [quizName, setQuizName] = useState('');
   const [showSaveForm, setShowSaveForm] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+  const [showProblematicQuestions, setShowProblematicQuestions] = useState(false);
   
   // Calculate percentage score - based on total unique questions
   const percentage = Math.round((score / totalQuestions) * 100);
@@ -19,6 +22,11 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz }
   // Calculate correct and wrong answers
   const correctAnswers = score;
   const wrongAnswers = totalQuestions - score;
+
+  // Sort problematic questions by incorrect count (most incorrect first)
+  const sortedProblematicQuestions = [...(problematicQuestions || [])].sort(
+    (a, b) => b.incorrectCount - a.incorrectCount
+  );
   
   // Function to get message based on score percentage
   const getMessage = () => {
@@ -87,6 +95,54 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz }
         </p>
       </div>
       
+      {/* Problematic Questions Section */}
+      {sortedProblematicQuestions.length > 0 && (
+        <div className="mb-4">
+          <button 
+            className="neu-button secondary mb-2"
+            onClick={() => setShowProblematicQuestions(!showProblematicQuestions)}
+          >
+            {showProblematicQuestions ? 'Hide Challenging Questions' : 'Show Challenging Questions'}
+          </button>
+          
+          {showProblematicQuestions && (
+            <motion.div 
+              className="neu-container-inner"
+              style={{ textAlign: 'left', padding: '1rem', marginTop: '1rem' }}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              transition={{ duration: 0.3 }}
+            >
+              <h3 className="mb-2" style={{ fontSize: '1.2rem', fontWeight: 700 }}>
+                Questions You Found Challenging
+              </h3>
+              
+              <ul style={{ listStyleType: 'none', padding: 0 }}>
+                {sortedProblematicQuestions.map((item, index) => (
+                  <li key={index} className="mb-3" style={{ 
+                    padding: '1rem', 
+                    border: '2px solid var(--border-color)',
+                    borderRadius: '8px',
+                    backgroundColor: 'var(--bg-light)',
+                    boxShadow: '3px 3px 0 var(--shadow-color)'
+                  }}>
+                    <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>
+                      Q: {item.question.question}
+                    </p>
+                    <p style={{ color: 'var(--incorrect)', marginBottom: '0.5rem' }}>
+                      Answered incorrectly {item.incorrectCount} times
+                    </p>
+                    <p style={{ color: 'var(--correct)' }}>
+                      Correct answer: {item.question.correctAnswer.toUpperCase()} - {item.question[item.question.correctAnswer]}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </div>
+      )}
+      
       <div className="mb-4">
         {showSaveForm ? (
           <div className="save-form" style={{ maxWidth: '400px', margin: '0 auto' }}>
@@ -109,7 +165,7 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz }
                 onClick={handleSaveQuiz}
                 disabled={!quizName.trim()}
               >
-                Save Quiz
+                Save Problematic Questions
               </button>
             </div>
           </div>

@@ -85,7 +85,8 @@ function App() {
         state.score, 
         false, 
         state.totalQuestions, 
-        state.incorrectQuestions
+        state.incorrectQuestions,
+        state.problematicQuestions
       );
     } else if (state.incorrectQuestions.length > 0) {
       // Move to incorrect questions
@@ -94,7 +95,9 @@ function App() {
         0, 
         state.score, 
         false, 
-        state.totalQuestions
+        state.totalQuestions,
+        [],
+        state.problematicQuestions
       );
     } else {
       // Complete the quiz
@@ -103,7 +106,9 @@ function App() {
         state.questions.length, 
         state.score, 
         true, 
-        state.totalQuestions
+        state.totalQuestions,
+        state.incorrectQuestions,
+        state.problematicQuestions
       );
     }
   };
@@ -133,7 +138,15 @@ function App() {
   // Load a saved quiz
   const loadSavedQuiz = (index: number) => {
     if (index >= 0 && index < savedQuizzes.length) {
-      startQuiz(savedQuizzes[index].questions);
+      startQuiz(
+        savedQuizzes[index].questions,
+        0,    // startIndex
+        0,    // initialScore
+        false, // isComplete
+        undefined, // totalQuestionsCount - use default
+        [],   // incorrectQuestionsOverride
+        []    // problematicQuestionsOverride
+      );
       setShowSavedQuizzes(false);
       setShowQuizBrowser(false);
       setShowJsonInput(false);
@@ -155,7 +168,15 @@ function App() {
 
   // Handle starting a quiz from the browser
   const handleStartBrowserQuiz = (questions: QuizQuestion[]) => {
-    startQuiz(questions);
+    startQuiz(
+      questions,
+      0,    // startIndex
+      0,    // initialScore
+      false, // isComplete
+      undefined, // totalQuestionsCount - use default
+      [],   // incorrectQuestionsOverride
+      []    // problematicQuestionsOverride
+    );
     setShowQuizBrowser(false);
   };
 
@@ -196,7 +217,15 @@ function App() {
         return (
           <JsonInput 
             onStart={(questions) => {
-              startQuiz(questions);
+              startQuiz(
+                questions,
+                0,    // startIndex
+                0,    // initialScore
+                false, // isComplete
+                undefined, // totalQuestionsCount
+                [],   // incorrectQuestionsOverride
+                []    // problematicQuestionsOverride
+              );
               setShowJsonInput(false);
             }} 
             savedQuizzes={savedQuizzes}
@@ -216,7 +245,17 @@ function App() {
         // Show saved quizzes
         return (
           <JsonInput 
-            onStart={startQuiz} 
+            onStart={(questions) => {
+              startQuiz(
+                questions,
+                0,    // startIndex
+                0,    // initialScore
+                false, // isComplete
+                undefined, // totalQuestionsCount
+                [],   // incorrectQuestionsOverride
+                []    // problematicQuestionsOverride
+              );
+            }}
             savedQuizzes={savedQuizzes}
             onLoadSavedQuiz={loadSavedQuiz}
             onDeleteSavedQuiz={deleteSavedQuiz}
@@ -240,6 +279,7 @@ function App() {
           totalQuestions={state.totalQuestions} 
           onRestart={onRestart}
           onSaveQuiz={saveCurrentQuiz}
+          problematicQuestions={state.problematicQuestions}
         />
       );
     }
