@@ -198,6 +198,14 @@ The content I want you to create a quiz for is:
               )}
               
               <button 
+                className="neu-button primary"
+                onClick={() => window.dispatchEvent(new CustomEvent('navigate-to-subjects'))}
+                style={{ marginRight: '1rem' }}
+              >
+                Browse Subjects
+              </button>
+              
+              <button 
                 className="neu-button accent"
                 onClick={copyQuizPrompt}
               >

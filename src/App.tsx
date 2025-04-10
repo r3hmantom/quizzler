@@ -38,6 +38,21 @@ function App() {
     loadSavedQuizzes();
   }, []);
 
+  // Listen for custom navigation events
+  useEffect(() => {
+    const handleNavigateToSubjects = () => {
+      setShowQuizBrowser(true);
+      setShowJsonInput(false);
+      setShowSavedQuizzes(false);
+    };
+    
+    window.addEventListener('navigate-to-subjects', handleNavigateToSubjects);
+    
+    return () => {
+      window.removeEventListener('navigate-to-subjects', handleNavigateToSubjects);
+    };
+  }, []);
+
   // Create the sounds directory and add sound files
   useEffect(() => {
     const createSoundFiles = async () => {
