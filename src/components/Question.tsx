@@ -23,7 +23,6 @@ export default function Question({
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
-  const [isExiting, setIsExiting] = useState(false);
 
   // Reset state when question changes
   useEffect(() => {
@@ -31,7 +30,6 @@ export default function Question({
     setShowResult(false);
     setIsCorrect(false);
     setIsDisabled(false);
-    setIsExiting(false);
   }, [question]);
 
   const handleOptionClick = (option: AnswerOption) => {
@@ -65,7 +63,6 @@ export default function Question({
   };
 
   const handleNextQuestion = () => {
-    setIsExiting(true);
     setTimeout(() => {
       onNext();
     }, 300);

@@ -1,0 +1,122 @@
+[
+    {
+      "question": "What is the most important capability for leaders to develop?",
+      "a": "Charisma",
+      "b": "Technical skills",
+      "c": "Self-awareness",
+      "d": "Decision-making",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What is a 'blind spot' in leadership?",
+      "a": "A lack of vision",
+      "b": "An unrecognized leadership opportunity",
+      "c": "A characteristic or habit that limits effectiveness but goes unnoticed",
+      "d": "An area where leaders need technical training",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Why is being 'too nice' considered a blind spot in leadership?",
+      "a": "It makes leaders seem fake",
+      "b": "They may fail to enforce rules",
+      "c": "They tend to avoid conflict and make poor decisions",
+      "d": "It leads to micromanagement",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which of the following is NOT one of the Big Five personality dimensions?",
+      "a": "Extroversion",
+      "b": "Agreeableness",
+      "c": "Creativity",
+      "d": "Openness to experience",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "A leader who is emotionally stable is likely to:",
+      "a": "Explode under stress",
+      "b": "Avoid social situations",
+      "c": "Handle criticism well and stay calm",
+      "d": "Be overly controlling",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which trait is associated with liking to be in control and influence others?",
+      "a": "Agreeableness",
+      "b": "Dominance",
+      "c": "Conscientiousness",
+      "d": "Openness",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What does a high internal locus of control indicate?",
+      "a": "Belief that fate determines outcomes",
+      "b": "Reliance on others for decisions",
+      "c": "Belief that one controls their own destiny",
+      "d": "Resistance to feedback",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Highly authoritarian leaders are likely to:",
+      "a": "Delegate frequently",
+      "b": "Value employee autonomy",
+      "c": "Rely heavily on formal authority",
+      "d": "Encourage open communication",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What are instrumental values?",
+      "a": "Beliefs about ultimate life goals",
+      "b": "Rules set by organizations",
+      "c": "Beliefs about appropriate behaviors to achieve goals",
+      "d": "Values that change frequently",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which theory assumes that people inherently dislike work and avoid responsibility?",
+      "a": "Theory A",
+      "b": "Theory X",
+      "c": "Theory Y",
+      "d": "Theory Z",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "Which perceptual distortion involves assigning general group traits to individuals?",
+      "a": "Halo effect",
+      "b": "Projection",
+      "c": "Perceptual defense",
+      "d": "Stereotyping",
+      "correctAnswer": "d"
+    },
+    {
+      "question": "What is the Fundamental Attribution Error?",
+      "a": "Blaming personal traits for others' failures and external factors for their successes",
+      "b": "Assuming everyone thinks like we do",
+      "c": "Overestimating internal causes of others' behavior",
+      "d": "Dismissing all feedback from subordinates",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What does Herrmann’s Whole Brain Model describe?",
+      "a": "The chemical structure of the brain",
+      "b": "Leadership styles based on ethics",
+      "c": "Thinking preferences across four brain quadrants",
+      "d": "Personality types in leadership",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which tool is based on Carl Jung’s personality theory?",
+      "a": "DISC profile",
+      "b": "MBTI (Myers-Briggs Type Indicator)",
+      "c": "Big Five Inventory",
+      "d": "Emotional Intelligence Test",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "How can leaders benefit from understanding different personality types?",
+      "a": "By assigning fixed roles to everyone",
+      "b": "By avoiding disagreements",
+      "c": "By fostering creativity and effective communication",
+      "d": "By enforcing uniform thinking",
+      "correctAnswer": "c"
+    }
+  ]

@@ -1,0 +1,98 @@
+[
+    {
+      "question": "What is the central idea of the contingency approach to leadership?",
+      "a": "There is a single best leadership style that applies to all situations.",
+      "b": "The effectiveness of leadership depends on the fit between the leader’s style and situational variables.",
+      "c": "Leadership solely depends on inherent leader traits.",
+      "d": "Leaders should ignore follower needs in favor of strict task management.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "According to Hersey and Blanchard’s Situational Theory, which leadership style is most effective when followers exhibit very low readiness (lack of ability and confidence)?",
+      "a": "Selling",
+      "b": "Participating",
+      "c": "Telling",
+      "d": "Delegating",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "In Hersey and Blanchard’s model, which of the following is NOT considered a factor in determining follower readiness?",
+      "a": "Ability",
+      "b": "Experience",
+      "c": "Task structure",
+      "d": "Confidence",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which tool does Fiedler’s Contingency Model use to assess a leader’s style?",
+      "a": "MBTI",
+      "b": "Leadership Grid",
+      "c": "Least Preferred Coworker (LPC) scale",
+      "d": "360-Degree Feedback Survey",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What are the three key situational factors in Fiedler’s Contingency Model?",
+      "a": "Leader-member relations, task structure, and position power",
+      "b": "Follower readiness, task complexity, and team size",
+      "c": "Emotional intelligence, authority, and group dynamics",
+      "d": "Motivation, communication style, and decision-making speed",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "Which Path–Goal leadership style involves providing clear instructions and setting specific performance goals for subordinates?",
+      "a": "Supportive Leadership",
+      "b": "Directive Leadership",
+      "c": "Participative Leadership",
+      "d": "Achievement-oriented Leadership",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What is the primary goal of the Path–Goal Theory?",
+      "a": "To show that leaders should only focus on tasks.",
+      "b": "To increase subordinate motivation by clarifying the route to rewards and enhancing the attractiveness of those rewards.",
+      "c": "To demonstrate that leadership traits are innate and cannot be learned.",
+      "d": "To ensure all decisions are made solely by the leader.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "Which leadership model focuses on determining the appropriate level of subordinate participation in decision making?",
+      "a": "Fiedler’s Contingency Model",
+      "b": "Hersey and Blanchard’s Situational Theory",
+      "c": "Path–Goal Theory",
+      "d": "Vroom–Jago Contingency Model",
+      "correctAnswer": "d"
+    },
+    {
+      "question": "Which of the following is NOT one of the five leader decision styles in the Vroom–Jago Model?",
+      "a": "Decide",
+      "b": "Consult Individually",
+      "c": "Apologize",
+      "d": "Delegate",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What does the term 'contingency' imply in the context of leadership?",
+      "a": "Leadership is effective only when a leader follows a rigid set of instructions.",
+      "b": "Leadership effectiveness is dependent on an appropriate match between leader behavior and situational factors.",
+      "c": "The best leaders are those who delegate all decisions.",
+      "d": "Effective leadership is independent of follower characteristics.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "According to Hersey and Blanchard’s Situational Theory, which leadership style is appropriate when followers have high ability, experience, and confidence?",
+      "a": "Telling",
+      "b": "Selling",
+      "c": "Participating",
+      "d": "Delegating",
+      "correctAnswer": "d"
+    },
+    {
+      "question": "In Fiedler’s Contingency Model, task-oriented leaders are more effective under which conditions?",
+      "a": "When leader-member relations are moderate and the tasks are ambiguous.",
+      "b": "In situations that are either highly favorable or highly unfavorable regarding leader-member relations, task structure, and position power.",
+      "c": "Only when the leader has a relationship-oriented style.",
+      "d": "In environments where followers are independent and self-managing.",
+      "correctAnswer": "b"
+    }
+  ]

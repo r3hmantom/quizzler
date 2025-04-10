@@ -1,4 +1,4 @@
-import { QuizQuestion } from '../types';
+import { QuizQuestion } from "../types";
 
 export interface SubjectInfo {
   name: string;
@@ -15,81 +15,61 @@ export interface QuizInfo {
 // Get all available subjects from the quizzesData directory
 export async function getSubjects(): Promise<SubjectInfo[]> {
   try {
-    const response = await fetch('/quizzesData/');
+    const response = await fetch("/quizzesData/");
     if (!response.ok) {
-      throw new Error('Failed to fetch subjects');
+      throw new Error("Failed to fetch subjects");
     }
-    
+
     // We're simulating a directory listing here
     // In a real app with a server, you'd get this from an API endpoint
-    return [
-      { name: 'Mathematics', path: '/quizzesData/Mathematics/' },
-      { name: 'Science', path: '/quizzesData/Science/' },
-      { name: 'History', path: '/quizzesData/History/' }
-    ];
+    return [{ name: "Leadership", path: "/quizzesData/Leadership/" }];
   } catch (error) {
-    console.error('Error getting subjects:', error);
+    console.error("Error getting subjects:", error);
     return [];
   }
 }
 
 // Get all quizzes for a specific subject
-export async function getQuizzesBySubject(subject: string): Promise<QuizInfo[]> {
+export async function getQuizzesBySubject(
+  subject: string
+): Promise<QuizInfo[]> {
   try {
     // Format subject name for path
-    const formattedSubject = subject.replace(/\s+/g, '_');
-    
+    const formattedSubject = subject.replace(/\s+/g, "_");
+
     const quizzes: QuizInfo[] = [];
-    
+
     // Hardcoded quiz info for each subject
     // In a real app, this would be fetched from the server
-    if (formattedSubject === 'Mathematics') {
+    if (formattedSubject === "Leadership") {
       quizzes.push(
-        { 
-          title: 'Algebra Basics', 
-          path: `/quizzesData/Mathematics/Algebra_Basics.json`,
-          fileName: 'Algebra_Basics.json',
-          subject: 'Mathematics'
+        {
+          title: "Contingency Models 1",
+          path: `/quizzesData/Mathematics/Contingency.json`,
+          fileName: "slides_1.json",
+          subject: "Leadership",
         },
-        { 
-          title: 'Geometry Fundamentals', 
-          path: `/quizzesData/Mathematics/Geometry_Fundamentals.json`,
-          fileName: 'Geometry_Fundamentals.json',
-          subject: 'Mathematics'
-        }
-      );
-    } else if (formattedSubject === 'Science') {
-      quizzes.push(
-        { 
-          title: 'Biology: Cells', 
-          path: `/quizzesData/Science/Biology_Cells.json`,
-          fileName: 'Biology_Cells.json',
-          subject: 'Science'
+        {
+          title: "Contingency Models 2",
+          path: `/quizzesData/Mathematics/slides_2.json`,
+          fileName: "slides_2.json",
+          subject: "Leadership",
         },
-        { 
-          title: 'Chemistry: Elements', 
-          path: `/quizzesData/Science/Chemistry_Elements.json`,
-          fileName: 'Chemistry_Elements.json',
-          subject: 'Science'
-        }
-      );
-    } else if (formattedSubject === 'History') {
-      quizzes.push(
-        { 
-          title: 'Ancient Civilizations', 
-          path: `/quizzesData/History/Ancient_Civilizations.json`,
-          fileName: 'Ancient_Civilizations.json',
-          subject: 'History'
+        {
+          title: "Leadership as an Individual Fundamentals",
+          path: `/quizzesData/Mathematics/slides_3.json`,
+          fileName: "slides_3.json",
+          subject: "Leadership",
         },
-        { 
-          title: 'World Wars', 
-          path: `/quizzesData/History/World_Wars.json`,
-          fileName: 'World_Wars.json',
-          subject: 'History'
+        {
+          title: "Powers in Leadership",
+          path: `/quizzesData/Mathematics/slides_4.json`,
+          fileName: "slides_4.json",
+          subject: "Leadership",
         }
       );
     }
-    
+
     return quizzes;
   } catch (error) {
     console.error(`Error getting quizzes for subject ${subject}:`, error);
@@ -104,7 +84,7 @@ export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
     if (!response.ok) {
       throw new Error(`Failed to fetch quiz at ${path}`);
     }
-    
+
     const questions: QuizQuestion[] = await response.json();
     return questions;
   } catch (error) {
@@ -116,5 +96,5 @@ export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
 // Format title from filename (replace underscores with spaces)
 export function formatTitle(fileName: string): string {
   // Remove .json extension and replace underscores with spaces
-  return fileName.replace('.json', '').replace(/_/g, ' ');
-} 
+  return fileName.replace(".json", "").replace(/_/g, " ");
+}

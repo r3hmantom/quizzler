@@ -11,24 +11,20 @@ interface QuizBrowserProps {
 
 export default function QuizBrowser({ onStartQuiz }: QuizBrowserProps) {
   const [selectedSubject, setSelectedSubject] = useState<SubjectInfo | null>(null);
-  const [selectedQuiz, setSelectedQuiz] = useState<QuizInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const handleSelectSubject = (subject: SubjectInfo) => {
     setSelectedSubject(subject);
-    setSelectedQuiz(null);
   };
 
   const handleBackToSubjects = () => {
     setSelectedSubject(null);
-    setSelectedQuiz(null);
   };
 
   const handleSelectQuiz = async (quiz: QuizInfo) => {
     try {
       setLoading(true);
-      setSelectedQuiz(quiz);
       
       // Load the quiz questions
       const questions = await loadQuizQuestions(quiz.path);
@@ -67,7 +63,6 @@ export default function QuizBrowser({ onStartQuiz }: QuizBrowserProps) {
           className="neu-button" 
           onClick={() => {
             setError(null);
-            setSelectedQuiz(null);
           }}
         >
           Back to Quizzes

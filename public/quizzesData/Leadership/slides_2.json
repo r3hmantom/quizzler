@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Which leadership style focuses on bringing significant change to both followers and the organization?",
+    "a": "Charismatic",
+    "b": "Transformational",
+    "c": "Coalitional",
+    "d": "Machiavellian",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is a characteristic of transformational leadership?",
+    "a": "Manipulation of followers for personal gain",
+    "b": "Maintaining organizational stability at all costs",
+    "c": "Building alliances with external stakeholders only",
+    "d": "Developing followers into leaders",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "Coalitional leadership primarily involves:",
+    "a": "Using fear and intimidation to control followers",
+    "b": "Building alliances and positive relationships to achieve goals",
+    "c": "Relying solely on charismatic qualities to inspire others",
+    "d": "Focusing on individual accomplishments rather than team efforts",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which of the following is a potential disadvantage of coalitional leadership?",
+    "a": "Decreased organizational power",
+    "b": "Limited ability to influence stakeholders",
+    "c": "Time and effort diverted from other leadership responsibilities",
+    "d": "Inability to communicate effectively with team members",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Charismatic leadership is characterized by:",
+    "a": "A focus on preserving power through any means necessary",
+    "b": "Building coalitions with external stakeholders only",
+    "c": "Igniting followers' energy and inspiring them to exceed normal efforts",
+    "d": "Prioritizing organizational stability over innovation",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Which leadership style prioritizes organizational stability and is willing to use any means necessary to preserve power?",
+    "a": "Transformational",
+    "b": "Charismatic",
+    "c": "Coalitional",
+    "d": "Machiavellian",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "What type of power is derived from a person's formal position or title within an organization?",
+    "a": "Expert power",
+    "b": "Referent power",
+    "c": "Legitimate power",
+    "d": "Reward power",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Which of the following is considered a 'soft power'?",
+    "a": "Legitimate power",
+    "b": "Coercive power",
+    "c": "Expert power",
+    "d": "Reward power",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "When followers actively oppose or defy a leader's directives, this response is known as:",
+    "a": "Compliance",
+    "b": "Resistance",
+    "c": "Commitment",
+    "d": "Adaptation",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which follower response is typically elicited by a leader's use of soft, personal, and interpersonal power?",
+    "a": "Compliance",
+    "b": "Resistance",
+    "c": "Commitment",
+    "d": "Indifference",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "What type of power results from a leader's specialized knowledge or skills?",
+    "a": "Legitimate power",
+    "b": "Coercive power",
+    "c": "Referent power",
+    "d": "Expert power",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "Which leadership tactic involves using logical reasoning to persuade followers?",
+    "a": "Appealing to a vision",
+    "b": "Rational persuasion",
+    "c": "Reciprocity",
+    "d": "Developing allies",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "The ability to provide incentives or rewards to influence behavior is known as:",
+    "a": "Coercive power",
+    "b": "Referent power",
+    "c": "Reward power",
+    "d": "Expert power",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Which of the following is a positive impact of transformational leadership?",
+    "a": "Increased organizational stability at the expense of innovation",
+    "b": "Enhanced follower development and organizational profitability",
+    "c": "Preservation of leader's authority through any means necessary",
+    "d": "Reduced need for building external relationships",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Referent power is based on:",
+    "a": "A leader's ability to punish non-compliance",
+    "b": "A leader's formal position in the organization",
+    "c": "The admiration and respect followers have for a leader's personality traits",
+    "d": "A leader's ability to provide material rewards",
+    "correctAnswer": "c"
+  }
+]
