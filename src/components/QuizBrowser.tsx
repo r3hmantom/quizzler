@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SubjectInfo, QuizInfo, loadQuizQuestions } from '../utils/quizDataUtils';
+import { SubjectInfo, QuizInfo, loadQuizQuestions, getSubjects } from '../utils/quizDataUtils';
 import SubjectList from './SubjectList';
 import QuizList from './QuizList';
 import SubjectManager from './SubjectManager';
@@ -25,6 +25,8 @@ interface QuizBrowserProps {
   pausedSubjectName?: string;
   pausedQuizTitle?: string;
   pausedProgress?: string;
+  restoreSubjectName?: string | null;
+  onRestoreComplete?: () => void;
 }
 
 type View = 'subjects' | 'quizzes' | 'manage-subjects' | 'quiz-editor';
@@ -36,6 +38,8 @@ export default function QuizBrowser({
   pausedSubjectName,
   pausedQuizTitle,
   pausedProgress,
+  restoreSubjectName,
+  onRestoreComplete,
 }: QuizBrowserProps) {
   const [view, setView] = useState<View>('subjects');
   const [selectedSubject, setSelectedSubject] = useState<SubjectInfo | null>(null);
@@ -55,6 +59,25 @@ export default function QuizBrowser({
   useEffect(() => {
     refreshLibrary();
   }, []);
+
+  useEffect(() => {
+    if (!restoreSubjectName) return;
+
+    let cancelled = false;
+    getSubjects().then((subjects) => {
+      if (cancelled) return;
+      const subject = subjects.find((s) => s.name === restoreSubjectName);
+      if (subject) {
+        setSelectedSubject(subject);
+        setView('quizzes');
+      }
+      onRestoreComplete?.();
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [restoreSubjectName, onRestoreComplete]);
 
   const handleSelectSubject = (subject: SubjectInfo) => {
     setSelectedSubject(subject);

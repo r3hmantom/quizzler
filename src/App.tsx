@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useQuiz } from './hooks/useQuiz'
 import Question from './components/Question'
 import Results from './components/Results'
@@ -11,6 +11,8 @@ import {
   saveSessionInfo,
   saveLastSelectedQuiz,
   getPausedSessionDisplay,
+  loadSessionInfo,
+  loadLastSelectedQuiz,
 } from './utils/quizUtils'
 import { QuizQuestion, QuizSessionMeta } from './types'
 import { migrateLegacyQuizzes } from './utils/userLibraryStorage'
@@ -28,6 +30,10 @@ function App() {
   } = useQuiz();
 
   const [showQuizBrowser, setShowQuizBrowser] = useState(true);
+  const [restoreSubjectName, setRestoreSubjectName] = useState<string | null>(null);
+  const handleRestoreComplete = useCallback(() => {
+    setRestoreSubjectName(null);
+  }, []);
 
   useEffect(() => {
     migrateLegacyQuizzes();
@@ -117,6 +123,12 @@ function App() {
   };
 
   const onExitQuiz = () => {
+    const subjectName =
+      state.subjectName ??
+      loadSessionInfo()?.subjectName ??
+      loadLastSelectedQuiz()?.subjectName ??
+      null;
+    setRestoreSubjectName(subjectName);
     setShowQuizBrowser(true);
   };
 
@@ -136,6 +148,7 @@ function App() {
     saveLastSelectedQuiz(meta);
     clearQuizState();
     startQuiz(questions, 0, 0, false, undefined, [], [], meta);
+    setRestoreSubjectName(null);
     setShowQuizBrowser(false);
   };
 
@@ -168,6 +181,8 @@ function App() {
           pausedSubjectName={pausedSession?.subjectName}
           pausedQuizTitle={pausedSession?.quizTitle}
           pausedProgress={pausedSession?.progress}
+          restoreSubjectName={restoreSubjectName}
+          onRestoreComplete={handleRestoreComplete}
         />
       );
     }
