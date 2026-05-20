@@ -1,0 +1,122 @@
+[
+    {
+      "question": "According to the provided text, what additional obligation does a public company face regarding disclosures compared to a private company?",
+      "a": "It must submit daily operational logs directly to shareholders.",
+      "b": "The stock exchange will impose additional disclosure requirements because its shares are available to the public.",
+      "c": "It is required to keep its accounting policies strictly confidential.",
+      "d": "It must eliminate the auditor's report from its annual documentation.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "Which of the following best captures the specific nature and purpose of a balance sheet as described in the material?",
+      "a": "It tracks the total cash inflows and outflows over the course of a financial year.",
+      "b": "It is a snapshot showing what the company owns (assets) and owes (liabilities) at a particular point in time.",
+      "c": "It provides a continuous forecast of future revenues over the next five years.",
+      "d": "It details how much money was received and spent on day-to-day trading activities within a given period.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "How is the concept of 'Net Worth' defined in the context of Jemima Puddleduck's balance sheet example?",
+      "a": "The sum total of all cash in hand and at the bank, ignoring liabilities.",
+      "b": "The total value of fixed assets before accounting for annual depreciation.",
+      "c": "The amount of cash remaining if all assets were sold and all debts were paid off.",
+      "d": "The total amount of long-term borrowings raised from issuing equity.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What is the term used to describe the systematic reduction in the value of fixed assets from one year to the next to reflect their useful lifetime?",
+      "a": "Share premium",
+      "b": "Depreciation",
+      "c": "Working capital",
+      "d": "Current expenditure",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "According to the criteria provided, what distinguishes a fixed asset from a current asset?",
+      "a": "Fixed assets can be converted to cash immediately, whereas current assets cannot.",
+      "b": "Fixed assets are items bought and sold in the course of day-to-day trading activities.",
+      "c": "Fixed assets are used to produce income and are not expected to be sold in normal trading operations, whereas current assets are easily converted to cash in the short term.",
+      "d": "Fixed assets are always valued at market price, while current assets are valued at purchase price minus depreciation.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "If a company buys a car for its sales staff to use, it is classified as a fixed asset. However, if a car dealer buys a car to resell it, how is that car classified?",
+      "a": "As an intangible asset",
+      "b": "As a long-term liability",
+      "c": "As a fixed asset, because all vehicles are capital equipment",
+      "d": "As a current asset, because it is part of day-to-day trading activities",
+      "correctAnswer": "d"
+    },
+    {
+      "question": "What standard rule applies to the valuation of current assets like inventory (stock) on the balance sheet?",
+      "a": "They must always be valued at their maximum expected retail price.",
+      "b": "They are valued at cost price or market value, whichever is lower.",
+      "c": "They are valued at the historic purchase price minus straight-line depreciation.",
+      "d": "They must be valued based on the total profit expected after future sales.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "A company produces 1,000 books at a cost of Rs. 2 each. The books sell for Rs. 10 each. Following the rule of 'cost or market value whichever is low', how should this stock appear as a current asset on the balance sheet?",
+      "a": "Rs. 10,000",
+      "b": "Rs. 8,000",
+      "c": "Rs. 2,000",
+      "d": "Rs. 12,000",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "A company purchases a database server for Rs. 100,000 and plans to use it for 5 years. Under the straight-line depreciation method, what will the asset's value be on the balance sheet at the end of year 3?",
+      "a": "Rs. 60,000",
+      "b": "Rs. 40,000",
+      "c": "Rs. 20,000",
+      "d": "Rs. 80,000",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What must a company do if a fixed asset is sold for an amount higher than its depreciated book value?",
+      "a": "It must show the difference as income in its financial reporting.",
+      "b": "It must subtract the difference from its working capital.",
+      "c": "It must add the difference directly to its long-term borrowings.",
+      "d": "It must redistribute the difference as called-up share capital.",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "Why do many companies treat the purchase of a long-term software package (like a payroll system) as current expenditure rather than a fixed asset, despite accounting rules allowing depreciation over its lifetime?",
+      "a": "Because software loses all its value within the first month of trading.",
+      "b": "Because software is intangible, making immediate expensing a common practice.",
+      "c": "Because software cannot contribute to a company's productive capacity.",
+      "d": "Because accounting rules strictly prohibit classifying intangible items as fixed assets.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "How is 'Working Capital' (net current assets) calculated, and what does it represent?",
+      "a": "It is calculated by adding fixed assets to current assets, representing total wealth creation.",
+      "b": "It is calculated by subtracting current liabilities from current assets, representing the money invested in day-to-day operations.",
+      "c": "It is calculated by dividing total assets by total liabilities, representing financial leverage.",
+      "d": "It is calculated by subtracting share premium from called-up capital, representing the par value of shares.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What is the 'share premium' as defined in the provided accounting content?",
+      "a": "The dividend payment distributed annually to the company's preferred shareholders.",
+      "b": "The total nominal par value of all the shares the company has issued.",
+      "c": "The extra amount raised when a successful company sells new shares for more than their par value.",
+      "d": "The cost associated with listing a public company's shares on a stock exchange.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which of the following elements is explicitly EXCLUDED from a Profit and Loss Account (Income Statement)?",
+      "a": "Turnover from continuing operations and cost of sales.",
+      "b": "Money borrowed, funds received from equity sales, and expenditure on acquiring fixed assets.",
+      "c": "Gross profit and interest payable on existing loans.",
+      "d": "Taxation on ordinary activities and retained profit for the year.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What is the primary function of the Cash Flow Statement according to the text?",
+      "a": "It serves as the link that ties the balance sheet and the profit and loss account to capital expenditure.",
+      "b": "It replaces the balance sheet by providing an immediate snapshot of fixed assets.",
+      "c": "It determines the annual straight-line depreciation rate for intangible property.",
+      "d": "It lists the qualitative feedback from auditors regarding corporate accounting policies.",
+      "correctAnswer": "a"
+    }
+  ]

@@ -1,0 +1,162 @@
+[
+  {
+    "question": "An HR department designs a technical assessment for software engineering candidates. Candidates who take the test multiple times score very consistently, but their test scores show no statistical correlation with their subsequent on-the-job performance ratings. How should this assessment tool be characterized?",
+    "a": "High reliability but low validity",
+    "b": "High validity but low reliability",
+    "c": "Low reliability and low validity",
+    "d": "High reliability and high validity",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "An organization wants to prepare its mid-level technical leads to transition into strategic operational leadership roles over the next two years. Which HR intervention is most appropriate, and what is its primary focus?",
+    "a": "Training, focusing on refining their existing skills for current technical tasks.",
+    "b": "Development, focusing on broadening their capability to handle future, unfamiliar responsibilities.",
+    "c": "Job evaluation, focusing on assessing the relative monetary value of leadership roles.",
+    "d": "Performance appraisal, focusing on correcting short-term behavioral deficiencies.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Within the framework of the Michigan School Model of human resource management, how do performance management, rewards, and development interact to influence overall organizational performance?",
+    "a": "Performance management operates independently of rewards, serving only as a compliance reporting tool.",
+    "b": "Rewards and development are parallel outcomes of performance management that feed back into enhancing individual and organizational performance.",
+    "c": "Selection directly dictates rewards without the mediation of performance appraisal or development.",
+    "d": "Development is exclusively used to remediate poor selection choices, while rewards motivate high selection choices.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "An organization undergoing a merger needs to establish a legally defensible compensation structure that ensures 'equal pay for work of equal value' across highly diverse roles. Which type of job evaluation method should HR select, and why?",
+    "a": "A non-analytical method like Job Ranking, because it is fast and evaluates whole jobs holistically.",
+    "b": "An analytical method like the Point Factor Method, because it deconstructs jobs into specific compensable factors to objectively score worth.",
+    "c": "A non-analytical method like Job Classification, because it is traditional in public sectors and ensures rigid scaling.",
+    "d": "A statistical method like Job Component, because it relies completely on external market salary matches.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "In a public sector organization, what is a primary strategic trade-off of utilizing panel interviews rather than one-to-one interviews during the selection process?",
+    "a": "Panel interviews increase the risk of nepotism but make equal rights compliance easier to document.",
+    "b": "Panel interviews reduce nepotism and corruption but risk favoring charismatic candidates over technically competent ones.",
+    "c": "One-to-one interviews are more legally defensible under discrimination laws but less reliable over time.",
+    "d": "Panel interviews eliminate the need for objective selection criteria while speeding up the decision-making process.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "A rapidly evolving technology firm wants to foster an agile, multi-skilled workforce capable of shifting fluidly across different projects. Which pay system aligns best with this objective?",
+    "a": "Job-Based Pay, because it links compensation tightly to a rigid description of the current task.",
+    "b": "Competency-Based Pay, because it incentivizes employees to acquire a broader spectrum of skills and knowledge.",
+    "c": "Piece-Rate Pay, because it maximizes individual output velocity regardless of skill diversity.",
+    "d": "Job Classification Pay, because it slots employees into immutable historical organizational grades.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Under GDPR and similar data protection frameworks, if an HR department collects extensive data on an employee's personal browsing habits on company networks without a clear, stated operational necessity, which principle is directly violated?",
+    "a": "Data minimization",
+    "b": "Data encryption",
+    "c": "Right to rectification",
+    "d": "Breach notification",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "What is a well-recognized systemic vulnerability of utilizing a rigid Management by Objectives (MBO) scheme for performance appraisals?",
+    "a": "It fails to provide clear, quantifiable metrics for employees, leaving performance expectations ambiguous.",
+    "b": "It disproportionately prioritizes easily quantifiable short-term metrics at the expense of critical, long-term strategic goals.",
+    "c": "It shifts all operational decision-making power from the employee directly to senior management.",
+    "d": "It creates a leniency error where all employees are automatically rated as above average.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "A manager completes performance appraisals for twenty subordinates and rates every single one of them as 'satisfactory' or 'meets expectations,' despite clear discrepancies in their individual contributions. What rating error has occurred?",
+    "a": "Leniency error",
+    "b": "Halo effect error",
+    "c": "Central tendency error",
+    "d": "Recency bias error",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "How does a legally compliant 'redundancy' differ fundamentally from a standard 'dismissal' for misconduct or poor capability?",
+    "a": "Redundancy is triggered by an employee's lack of capability to perform the duties required.",
+    "b": "Redundancy focuses on the elimination or reduction of the job category itself, not the personal faults of the worker.",
+    "c": "Dismissal requires statutory financial compensation by law, whereas redundancy does not.",
+    "d": "Redundancy occurs exclusively when an employer finds a candidate's work permit has expired.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "A manufacturing plant implements a program where teams of workers receive cash bonuses calculated from documented reductions in material waste and improvements in production efficiency. This is an example of which incentive system?",
+    "a": "Profit sharing",
+    "b": "Gain sharing",
+    "c": "Competency pay",
+    "d": "Piece-rate pay",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "An IT company administers a selection test designed to evaluate a candidate's innate potential to learn complex machine learning programming languages, even if they have no prior coding experience. What type of test is this?",
+    "a": "Ability test",
+    "b": "Personality test",
+    "c": "Aptitude test",
+    "d": "Job classification test",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "What is the primary operational advantage of implementing a 360-degree performance appraisal system compared to a traditional top-down supervisor appraisal?",
+    "a": "It simplifies the administrative process and minimizes data gathering efforts for HR.",
+    "b": "It eliminates the risk of central tendency and leniency errors across all evaluators.",
+    "c": "It synthesizes multi-perspective performance data from superiors, peers, subordinates, and clients, providing a more comprehensive view of behavior.",
+    "d": "It shifts compensation and promotion decisions entirely to anonymous external customers.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "When an HR manager engages in forecasting future workforce supply and demand by analyzing current workload trends, skills inventory, and expected organizational takeovers, what macro-HR function is being executed?",
+    "a": "Job Evaluation",
+    "b": "Human Resource Planning",
+    "c": "Analytical Performance Management",
+    "d": "Gain Sharing Allocation",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What distinguishes the Factor Comparison Method from the Point Factor Method in quantitative job evaluation?",
+    "a": "Factor Comparison uses no pre-determined factors and relies on holistic ranking.",
+    "b": "Factor Comparison selects benchmark 'key jobs' to establish baseline rankings for compensable factors, blending ranking with quantitative evaluation.",
+    "c": "Point Factor Method relies purely on regression analysis and statistical software packages to assign pay.",
+    "d": "Point Factor Method is non-analytical and cannot be used to defend against discrimination lawsuits.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why is ensuring anti-discrimination compliance a persistent challenge for HR professionals when designing informal, one-to-one recruitment interviews?",
+    "a": "One-to-one interviews are inherently illegal under modern employment rights legislation.",
+    "b": "The unstructured nature of one-to-one interviews makes it difficult to objectively document and demonstrate that selection decisions were free from bias.",
+    "c": "One-to-one interviews automatically mandate that candidates be evaluated by a team committee.",
+    "d": "These interviews eliminate the employer's ultimate right to make the final selection decision.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "An organization introduces a 'cafeteria-style' benefits package. What is a primary cause-and-effect relationship associated with this choice?",
+    "a": "It decreases employee motivation because benefits are stripped down to a bare mandatory minimum.",
+    "b": "It optimizes employee satisfaction by allowing personalized benefit mixes, but increases administrative complexity and management difficulty for HR.",
+    "c": "It eliminates all legally required benefits like social security and workers' compensation.",
+    "d": "It lowers company costs automatically by forcing employees to pay for all health insurance out of pocket.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Based on general macroeconomic patterns in human resource management, what paradox exists regarding staff training and development in high-tech corporate environments?",
+    "a": "Training is considered entirely irrelevant to performance, yet it receives the highest portion of capital investment.",
+    "b": "Training is highly critical due to rapid technological obsolescence, yet it is often the first operational budget item cut during financial shortfalls.",
+    "c": "Training is mandatory for entry-level tasks but banned for executive leadership positions.",
+    "d": "High-tech firms rely exclusively on long-distance degrees funded entirely by the government.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "When public sector or governmental organizations hire specialized IT professionals, why do traditional, rigid pay scales often lead to recruitment failures?",
+    "a": "Public sector roles require fewer qualifications than private sector positions.",
+    "b": "Rigid grade systems struggle to adapt to volatile market conditions where private tech salaries vastly outpace public scales.",
+    "c": "Government systems rely exclusively on competency-based pay rather than job-based pay.",
+    "d": "Public sector compensation schemes are legally prohibited from offering any mandatory benefits.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which scenario best exemplifies the concept of 'constructive dismissal' within labor relations?",
+    "a": "An employer terminates a worker immediately following a severe, documented act of workplace misconduct.",
+    "b": "An employer purposefully makes an employee's working conditions so intolerable or legally non-compliant that the employee feels forced to resign.",
+    "c": "An employee voluntarily steps down to pursue a part-time academic degree under a tuition reimbursement plan.",
+    "d": "An entire department is terminated because an automated software system makes their job category obsolete.",
+    "correctAnswer": "b"
+  }
+]

@@ -17,10 +17,10 @@ export const subjects: SubjectConfig[] = [
     description: "Explore leadership quizzes",
   },
   // Example override for src/data/ppit:
-  // {
-  //   name: "PPIT",
-  //   path: "ppit",
-  //   color: "#ffde59",
-  //   description: "Explore PPIT quizzes",
-  // },
+  {
+    name: "PPIT",
+    path: "ppit",
+    color: "#ff5959",
+    description: "Explore PPIT quizzes",
+  },
 ]; 

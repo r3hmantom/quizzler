@@ -1,0 +1,194 @@
+[
+  {
+    "question": "When a computer services contract contains terms that are found to be excessively harsh or structurally unfair, how does contract law step in to resolve the imbalance?",
+    "a": "It automatically rewrites the agreement to match current market-rate time and materials standards.",
+    "b": "It sets aside or nullifies the unconscionable and unreasonable clauses to restore equity.",
+    "c": "It forces the weaker party to absorb the losses under the doctrine of absolute contractual sanctity.",
+    "d": "It forwards the dispute to a federal trade agency for administrative restructuring of the corporate entities.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why are commercial lawyers frequently characterized as born 'pessimists' during the drafting stage of a custom software contract?",
+    "a": "They aim to extend billable negotiation hours by intentionally overcomplicating simple agreements.",
+    "b": "They are fundamentally unfamiliar with agile software engineering concepts and fear technical failure.",
+    "c": "They focus on identifying, resolving, and setting clear rules for hypothetical future difficulties and failure scenarios.",
+    "d": "They try to discourage their clients from pursuing volatile, cross-border e-commerce opportunities.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "How do standard form contracts used by software suppliers combine economic scalability with the need to handle client-specific requirements?",
+    "a": "By dynamically updating the boilerplate terms in real-time during weekly progress meetings.",
+    "b": "By keeping foundational legal terms unchanged while isolating project-specific definitions inside separate appendices or annexes.",
+    "c": "By removing the introductory identification blocks to render the agreement highly flexible.",
+    "d": "By converting the legal architecture into a verbal agreement that avoids fixed engineering scope specifications.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "In a fixed-price software development agreement, how can a supplier protect themselves against the financial risks of evolving and expanding client requirements?",
+    "a": "By incorporating an appendix specifying daily staff grade charging rates to calculate payments for extra work.",
+    "b": "By unilaterally increasing total project costs by up to 50 percent without prior client documentation.",
+    "c": "By immediately pausing all engineering work and forfeiting the project's intellectual property rights.",
+    "d": "By requiring the client to waive their right to perform any post-development acceptance testing.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "Why do custom software contracts often stipulate that copyright ownership transfers to the client only after the final payment is made in full?",
+    "a": "To ensure compliance with international e-commerce harmonization directives within the internal EU market.",
+    "b": "To act as a critical piece of financial leverage, protecting the supplier against client non-payment or default.",
+    "c": "To automatically release the supplier from fulfilling any subsequent 90-day warranty obligations.",
+    "d": "To force the client to host the operational code exclusively on the supplier's machine facilities.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "If a client successfully negotiates outright ownership or an exclusive license of a software asset's copyright, what is the immediate commercial implication for the software house?",
+    "a": "The software house is legally barred from generating revenue by licensing that system or its unique core components to other buyers.",
+    "b": "The software house must absorb all post-delivery maintenance expenses out-of-pocket for an indefinite duration.",
+    "c": "The software house must immediately put all internal development staff into a neutral third-party escrow account.",
+    "d": "The project automatically transitions into a consultancy framework, requiring a strategic corporate report instead of code.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "When a software supplier retains the copyright to a custom system, which mechanism directly protects the client if the supplier unexpectedly goes into liquidation or ceases trading?",
+    "a": "Applying a 2 percent interest surcharge above the bank base lending rate to all past invoices.",
+    "b": "An arbitration clause governed exclusively by the Institution of Electrical Engineers.",
+    "c": "Placing an up-to-date copy of source code listings and documentation in escrow with a neutral third party.",
+    "d": "Converting the agreement into a short-term contract hire model with daily variable charging scales.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "If a software license agreement contains no specific language regarding whether the licensee can transfer or assign their usage rights, what is the standard legal presumption?",
+    "a": "The license is universally assignable to any corporate affiliate or third-party entity without restriction.",
+    "b": "The agreement is automatically voided and must be renegotiated under different applicable laws.",
+    "c": "The license is deemed non-assignable, meaning the licensee cannot legally transfer it to another party.",
+    "d": "The customer gains full copyright ownership under default commercial assignment rules.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Why are standard contractual remedies for late payments—such as interest surcharges and contract termination options—rarely enforced by suppliers except in extreme cases?",
+    "a": "Because enforcing these clauses typically destroys the client-supplier goodwill required to successfully complete complex projects.",
+    "b": "Because financial penalties violate basic e-commerce directives concerning digital signatures.",
+    "c": "Because computing contracts are legally required to resolve invoicing disputes via verbal agreements only.",
+    "d": "Because interest charges automatically transfer the software's copyright back to the client.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "How does a structured stage-payment plan (e.g., separating signing, development milestones, acceptance, and warranty) help mitigate risk in a custom fixed-price contract?",
+    "a": "It ensures that the supplier receives 100 percent of the funds before any engineering work begins.",
+    "b": "It balances supplier cash flow while protecting the client by tying payments directly to visible progress and formal acceptance.",
+    "c": "It eliminates the need for clear requirements specifications or project management oversight.",
+    "d": "It automatically converts the contract into a simple consultancy agreement at each major milestone.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is a predictable economic consequence on the initial bidding phase if a client insists on including a harsh delivery penalty clause in a fixed-price contract?",
+    "a": "The supplier will significantly lower their base price to show good faith regarding the timeline.",
+    "b": "The supplier will likely inflate their initial bid price by at least half of the maximum penalty value to cover the added risk.",
+    "c": "The supplier will substitute all custom software development with generic consultancy reports.",
+    "d": "The supplier will transfer full copyright to a third-party escrow account prior to signing.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why do capped penalty clauses often lose their effectiveness as an incentive for late-running projects when the delay approaches its maximum contractual limit?",
+    "a": "Because the client becomes legally obligated to waive all remaining project specifications.",
+    "b": "Because the supplier has already forfeited their right to seek independent technical arbitration.",
+    "c": "Because the supplier has already lost the maximum amount of money allowed under the clause, leaving little incentive to finish a low-margin project.",
+    "d": "Because the contract automatically transitions into an unchangeable contract hire agreement.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Why are suppliers strongly motivated to avoid project delays in fixed-price contracts, even when explicit penalty clauses are completely absent?",
+    "a": "Because delays cause copyright ownership to automatically pass to the client early.",
+    "b": "Because extended project timelines keep engineering resources tied up, eating directly into the supplier's profit margins.",
+    "c": "Because delay periods automatically trigger an audit by international e-commerce regulators.",
+    "d": "Because the supplier is legally barred from applying inflation adjustments after the original target date.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "If a custom software project is delayed because the client fails to provide required machine facilities or staff access by the agreed dates, what is the legal outcome?",
+    "a": "The supplier must absorb all costs associated with their idled engineering teams.",
+    "b": "The contract is immediately nullified, and all work-in-progress is destroyed.",
+    "c": "The client can be held contractually liable for delay payments to compensate the supplier for extra expenses.",
+    "d": "The agreement automatically shifts to an un-capped consultancy framework with zero client obligations.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "What core principle should govern a robust acceptance procedure within a fixed-price custom software agreement?",
+    "a": "The procedure must rely on subjective, shifting client satisfaction surveys conducted at regular intervals.",
+    "b": "The client should provide a fixed set of objective acceptance tests and expected results, which conclusively define project completion.",
+    "c": "The testing phase must be managed by an independent lawyer who can inspect the code for copyright compliance.",
+    "d": "Acceptance should be automatically assumed exactly 30 days after the initial contract signing date, regardless of code status.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "How does negotiating the duration of a post-acceptance warranty period affect the overall commercial dynamics of a software contract?",
+    "a": "Shortening or eliminating the warranty window reduces contract costs, while lengthening it increases the supplier's risk premium and overall price.",
+    "b": "A longer warranty period automatically strips the supplier of their intellectual property rights.",
+    "c": "Reducing the warranty period shifts accountability for late-stage project delays entirely onto the client.",
+    "d": "Prolonging the warranty window removes the requirement for initial acceptance testing.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "If a corporate client prematurely terminates a fixed-price contract due to a internal policy change, what equitable remedy does a standard agreement provide for the supplier?",
+    "a": "The supplier can claim full copyright over all of the client's historical business systems.",
+    "b": "The supplier is paid for all work executed up to that date, plus compensation for the time required to redeploy staff onto other revenue-generating work.",
+    "c": "The supplier is forced to refund all previous stage payments received since the contract's signature.",
+    "d": "The contract is retroactively reclassified as a contract hire model with fixed interest penalties.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why do software contracts frequently include technical arbitration clauses pointing to bodies like the British Computer Society rather than relying on standard court actions?",
+    "a": "Courts are legally barred from interpreting contracts that involve electronic signatures or online trade.",
+    "b": "Arbitration allows disputes to be decided efficiently by independent specialists who possess both legal and deep technical understanding.",
+    "c": "Arbitration completely eliminates the client's obligation to pay for variations and requirements changes.",
+    "d": "Choosing an arbitrator guarantees that copyright ownership will be divided equally between both organizations.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why do some organizations actively push back against including standard independent arbitration clauses in their software contracts?",
+    "a": "They believe that using an arbitrator automatically voids their 90-day post-acceptance product warranty.",
+    "b": "They are concerned that entering into arbitration means they are signed away some of their fundamental legal rights.",
+    "c": "Arbitrators are legally required to convert all fixed-price agreements into time and materials arrangements.",
+    "d": "They wish to keep all technical specifications and requirements open to unilateral modification.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is the primary operational characteristic that separates a 'Contract Hire' agreement from a 'Fixed-Price' software development contract?",
+    "a": "The supplier takes full responsibility for delivering an end-to-end verified system within an unchangeable price limit.",
+    "b": "The supplier merely provides competent personnel who work directly under the client's management and operational direction.",
+    "c": "Payment is tied entirely to proving the software meets predefined objective test suites.",
+    "d": "The agreement deals exclusively with evaluating organizational structures and providing strategic business reports.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "How does the contractual significance of acceptance testing change when moving from a Fixed-Price contract to a Time and Materials contract?",
+    "a": "In Time and Materials, testing is legally forbidden to protect the developer's proprietary engineering tools.",
+    "b": "In Fixed-Price, testing defines project completion and triggers payment; in Time and Materials, it lacks contractual weight since payment depends on time spent rather than test outcomes.",
+    "c": "Failing an acceptance test in a Time and Materials setup automatically requires the supplier to refund all accumulated labor fees.",
+    "d": "Fixed-price contracts use acceptance testing purely for internal quality control, while Time and Materials contracts use it to calculate delay penalties.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is the primary conceptual distinction between a standard Consultancy contract and a custom software development contract?",
+    "a": "Consultancy contracts are exclusively billed on a daily contract hire basis with variable interest penalties.",
+    "b": "The final deliverable of a consultancy project is typically an evaluative report or proposal document rather than an operational software system.",
+    "c": "Consultancy agreements completely omit clauses regarding applicable law, cross-border jurisdiction, and confidentiality.",
+    "d": "Consultancy projects require the client to place all internal software listings into an independent escrow account.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why is it essential to include an explicit 'applicable law' clause in contracts where the client and supplier maintain offices in different countries?",
+    "a": "To ensure that all electronic commerce signatures are processed through European Union servers.",
+    "b": "To explicitly declare which jurisdiction's legal system will be used to interpret and enforce the contract's terms.",
+    "c": "To automatically convert cross-border agreements into low-risk consultancy frameworks.",
+    "d": "To legally bar both organizations from seeking independent technical arbitration during a dispute.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What underlying factor compounds the difficulty of drafting clean computer contracts, leading to potential ambiguities between the contracting parties?",
+    "a": "The legal requirement that all custom software specifications must be written in complex programming languages.",
+    "b": "The reality that both lawyers and computer scientists use specialized professional jargon that is largely unfamiliar to the other group.",
+    "c": "The total absence of international guidelines or directives regarding electronic commerce and signatures.",
+    "d": "The rule that standard form terms and conditions must be rewritten entirely from scratch for every single engagement.",
+    "correctAnswer": "b"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "question": "An organization's Operations Director insists on keeping a senior developer on a long-term legacy software project to maximize immediate resource utilization and revenue. However, the developer expresses that this assignment stalls their career growth. If the director forces this short-term assignment, what is the primary long-term systemic risk to the software house?",
+    "a": "An immediate, automatic reduction in the company's daily charge rate across all developer grades.",
+    "b": "The immediate conversion of the developer's salary from a revenue-earning cost to a non-revenue-earning corporate overhead.",
+    "c": "Loss of valuable specialized talent due to misalignment with individual career aspirations, harming long-term retention.",
+    "d": "A mandatory structural transition from a functional division of responsibility to a fully decentralized model.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "A regional manager in a functionally structured software firm is preparing a complex project bid for a local client. Winning the contract requires deep engineering input from centralized specialized expert groups. Why does a 'clash of structures' frequently occur for the manager in this scenario?",
+    "a": "The manager possesses essential local context but must compete for the time and allocation of centralized experts who have separate functional and operational allegiances.",
+    "b": "Centralized functional expert groups are structurally prohibited from billing hours to revenue-earning custom projects.",
+    "c": "Company policy mandates that only the Technical Director can deliver finalized commercial and marketing presentations to foreign clients.",
+    "d": "Functional divisions completely eliminate the need for centralized operational policies, leading to a total breakdown in local governance.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "In a custom software development company, why is it structurally critical to separate the function of Quality Management (managed by the Technical Director) from Day-to-Day Operations (managed by the Operations Director)?",
+    "a": "To ensure that all quality assurance activities are classified as non-revenue earning overheads and kept entirely separate from client-funded budgets.",
+    "b": "To prevent short-term operational pressures for maximum staff utilization and quick delivery from compromising long-term product quality and corporate reputation.",
+    "c": "Because quality management functions are restricted to basic research and development, which cannot legally be integrated into active software projects.",
+    "d": "To allow the daily charge rate of technical developers to automatically adjust based on the number of defects found during testing cycles.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "A bespoke software company frequently alternates between being desperate to recruit staff to service won contracts and being desperate to find new business to keep its existing staff billable. What is an underlying cause and direct personnel consequence of this unstable cycle?",
+    "a": "Extreme decentralization causes the cycle, which systematically prevents the company from leveraging third-party training courses.",
+    "b": "An over-reliance on package software products creates this volatility, resulting in an immediate freeze of all semi-annual staff appraisals.",
+    "c": "Over-capitalization leads to the cycle, creating a permanent structural reduction of average staff utilization rates below acceptable levels.",
+    "d": "Under-capitalization acts as a root cause, forcing the organization to place staff on projects poorly matched to their skills and career paths just to maintain short-term revenue-earning work.",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "In a medium-sized software firm, developers are organized into functional expertise groups (e.g., database specialists) to foster capability, but are continuously deployed to cross-functional projects. What is a primary practical effect of this operational model on the staff?",
+    "a": "It mandates that the company completely abandon its functional division of responsibility in favor of purely geographical reporting lines.",
+    "b": "It systematically decreases the daily cost per employee by eliminating all management and secretarial overheads.",
+    "c": "It often dilutes the staff's sense of group identity and complicates the continuity of career management as developers shift between different project environments.",
+    "d": "It eliminates the operational requirement for formal performance appraisals and code reviews.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "As a software house scales from a small startup of under 50 people to a significantly larger organization, how do staff management dynamics fundamentally change, and what structural adaptation becomes necessary?",
+    "a": "Direct personal relationships with directors diminish, requiring formal systems like bi-annual appraisals to ensure achievements are recorded and career paths remain clear.",
+    "b": "Employee loyalty naturally increases due to corporate size, allowing the company to replace formal training with informal, unpaid overtime.",
+    "c": "The operational distinction between revenue-earning technical staff and non-revenue-earning management is completely phased out.",
+    "d": "Recruitment shifts entirely away from industry standard salary trends and relies exclusively on personal contacts of the original founders.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "A project manager is reviewing a monthly project costing report and observes that the cumulative gross margin as a percentage of revenue has dropped. The manager claims they have limited control over the underlying cost factors. Which organizational reality supports this claim?",
+    "a": "Project costing systems are designed to monitor prospective sales pipelines rather than active, historical project expenditures.",
+    "b": "The baseline annual salaries and daily costs of the technical staff grades are pre-determined by corporate HR and financial policies, not by the individual project manager.",
+    "c": "The Technical Director possesses sole operational authority over the daily schedule and utilization of all revenue-earning staff.",
+    "d": "Bespoke fixed-price contracts automatically recalculate their total revenue based on the actual hours logged by developers each month.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "When preparing the corporate budget for a software house, what is the primary operational purpose of integrating the Operations Director's view on achievable staff utilization rates?",
+    "a": "It is used to calculate the mandatory legal minimum health insurance benefits required for non-revenue earning staff.",
+    "b": "It determines the exact rate of equipment depreciation for non-technical office assets like furniture and buildings.",
+    "c": "It defines how marketing budgets are split between technical conference sponsorships and local sales commissions.",
+    "d": "It forms the baseline for estimating the total revenue the technical staff can generate, which dictates the limit for containing non-revenue overhead costs.",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "An executive needs to evaluate two things: the guaranteed revenue from contracted work over the next twelve months across different developer grades, and the speculative pipeline of future opportunities. Which combination of reports should they request?",
+    "a": "The confirmed sales report to assess committed contract staff allocations and revenues, and the sales prospects report to evaluate potential deal values and likelihoods.",
+    "b": "The project costing report to check individual gross margins, and the non-revenue earning overhead expenditure log to view operational costs.",
+    "c": "The semi-annual staff appraisal summary for code reviews, and the corporate equipment depreciation matrix.",
+    "d": "The strategic long-term goals statement, and the cross-functional expert group competency matrix.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "A software firm wants to expand into a new international market. The board is evaluating whether to acquire an existing local company or build a new branch from scratch. What is the fundamental strategic trade-off between these two approaches?",
+    "a": "Acquisition eliminates the need to comply with local employment legislation, while starting from scratch guarantees that all local staff speak the parent company's native language.",
+    "b": "Acquisition reduces entry risk but is expensive and risks staff turnover during integration, while a greenfield build requires less capital but carries high risk dependent on finding the right local manager.",
+    "c": "Starting from scratch minimizes risk by converting all technical staff into non-revenue earning management roles to stabilize governance.",
+    "d": "Acquisition forces an immediate transition from fee-based bespoke software to packaged products, while starting from scratch avoids corporate overhead costs completely.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Syniad Software Ltd's governance board consists of the four original founders and two later recruits. What distinctive characteristic defines its corporate ownership and founding team structure?",
+    "a": "The shares are entirely owned by external venture capital firms, leaving founders with operational control only.",
+    "b": "The four original founders still own most of the shares in the company and serve as members of the Board of Directors.",
+    "c": "The company was immediately launched as a public corporation on the London Stock Exchange, dispersing all founder shares.",
+    "d": "Ownership is decentralized equally among all engineering staff with more than five years of tenure.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Syniad Software Ltd specializes in 'bespoke software.' Based on the corporate profile, what does this specialization entail and what technical demands does it impose on the firm?",
+    "a": "Software solutions created for a specific user, demanding recently developed technologies or the creation of new technologies.",
+    "b": "Mass-market packaged software templates designed for automated cloud deployment with minimal modification.",
+    "c": "Open-source general utility frameworks that eliminate the need for engineering or specialized research budgets.",
+    "d": "Standard database engines operating exclusively under static, legacy licensing terms.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "An operational manager requests a developer to deploy ONSITE abroad for an upcoming project, but the employee refuses due to personal factors. According to the company's case analysis, what is the primary structural conflict highlighted here?",
+    "a": "A financial discrepancy between international corporate travel insurance limits and London office rates.",
+    "b": "A disagreement between the Sales and Technical Directors regarding the pricing of travel overheads.",
+    "c": "A clash between operational demands for immediate onsite resource deployment and the personal factors or preferences of individual employees.",
+    "d": "An administrative policy mismatch between the Financial Director's currency hedging strategies and local taxation laws.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Within Syniad's organizational framework, how are training responsibilities strictly divided between the Technical Director and the Personnel/HR function?",
+    "a": "The Personnel function manages all training across the board, completely excluding the Technical Director from curriculum decisions.",
+    "b": "Training responsibilities are outsourced entirely to third-party institutions, removing them from all internal director portfolios.",
+    "c": "The Technical Director manages project management certifications, while the Personnel function handles deep engineering training.",
+    "d": "The Technical Director is responsible for technical training, whereas non-technical competencies like project management or presentational skills fall under the personnel function.",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "Why does the Technical Director's involvement in research and development, technical marketing, or conference presentations frequently cause friction with the Operations Director?",
+    "a": "Because these activities automatically double the daily cost per employee across all technical developer grades.",
+    "b": "Because when personnel participate in training, R&D, or technical marketing, they are unavailable for revenue-earning, productive work, which affects operational utilization targets.",
+    "c": "Because R&D activities are legally mandated to be funded exclusively through external foreign government subsidies.",
+    "d": "Because the Operations Director is structurally prohibited from reviewing the content of external publications.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "According to the Technical Director's strategic brief, what is the core market reality that necessitates continuous funding for Research and Development (R&D)?",
+    "a": "The reality that what sells today might not sell tomorrow, requiring the firm to set aside funds to develop future technologies and train developers.",
+    "b": "The strict legal mandate that fixed-price contracts expire automatically if a firm fails to register three new patents annually.",
+    "c": "The accounting principle that R&D is the only operational category that completely avoids corporate overhead calculation.",
+    "d": "The commercial observation that packaged software solutions require significantly less R&D than basic office assets.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "How are centralized corporate policies and procedures typically established and adopted within a company of Syniad's specific size and organizational maturity?",
+    "a": "They are handed down via absolute mandate by external institutional shareholders without internal director review.",
+    "b": "They are automatically generated by financial compliance software based strictly on Manchester office overheads.",
+    "c": "They are usually developed within one part of the company and subsequently adopted across the firm by general consent.",
+    "d": "They are completely forbidden in favor of independent, decentralized governance rules at each regional branch.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "When Syniad was a small startup with fewer than 50 staff members, how did the close personal relationship between directors and employees manifest in day-to-day operations?",
+    "a": "Staff received guaranteed equity bonuses every six months based on external market evaluation.",
+    "b": "Directors mandated strict, automated time-tracking software to supervise daily code commits.",
+    "c": "The company established an extensive internal training department that barred employees from attending external courses.",
+    "d": "Employees demonstrated deep loyalty, showing a willingness to work unpaid overtime when necessary and maintaining high technical standards with minimal supervision.",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "As the software house expanded, direct personal relationships faded. What formal purpose do the semi-annual staff appraisals serve to counteract this dilution?",
+    "a": "To calculate the automatic depreciation rate of corporate laptop hardware and office assets.",
+    "b": "To ensure achievements are properly recorded, clarify promotion requirements, establish training/career plans, and communicate the company's performance opinion to staff.",
+    "c": "To structurally transition the company from fee-based bespoke software to a pure package-software model.",
+    "d": "To eliminate the need for technical code reviews and deadline commitment tracking by project managers.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Syniad's management faces a persistent dilemma regarding specialized talent groups (e.g., its six database experts). What is this specific organizational challenge?",
+    "a": "How to exploit and foster collective group expertise in an environment where members of the group are usually deployed across completely different projects.",
+    "b": "The reality that database experts refuse to use recently developed technologies, preferring legacy COBOL systems.",
+    "c": "The constraint that the daily cost of database specialists is structurally lower than Grade 1 technical staff, disrupting the budget matrix.",
+    "d": "The operational rule that database specialists report exclusively to the Sales & Marketing Director.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "When preparing the corporate budget, how are 'non-revenue earning staff' classified, and what is the rule regarding their associated costs?",
+    "a": "They are classified as direct project expenses and billed directly to fixed-price bespoke software clients.",
+    "b": "Their compensation is entirely dependent on speculative sales prospects reports and international market benchmarks.",
+    "c": "They include management, secretarial, and accounting staff, whose overhead costs must be contained within the revenue expected to be earned by technical staff.",
+    "d": "They are exempt from corporate financial monitoring because their activities have zero impact on cumulative gross margins.",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "When analyzing the technical staff grade matrix within the budget document, what general financial heuristic is observed regarding employee salary versus generated income?",
+    "a": "A technical developer's annual salary is exactly equal to the total revenue they generate each year.",
+    "b": "An individual employee usually earns at least twice the amount of salary they take through the work they generate.",
+    "c": "Grade 7 senior engineers cost significantly more to employ than the total revenue they can possibly log.",
+    "d": "The daily cost of an employee automatically decreases as their utilization percentage drops.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Monitoring Syniad's overall performance against the corporate budget is complicated by random financial fluctuations. Which set of factors drives these deviations?",
+    "a": "Shifting head offices from London to Manchester, and changing the legal name of the company.",
+    "b": "Mandatory health insurance compliance and the direct depreciation of office building assets.",
+    "c": "Semi-annual appraisal frequency changes and the recruitment of overseas marketing directors.",
+    "d": "Annual budget vs staff hiring timelines, the impact of large individual projects, and fixed-price project estimations.",
+    "correctAnswer": "d"
+  },
+  {
+    "question": "Syniad notes that its single-pool technical staff model works well when expanding to Holland (where staff communicate in English) but warns that moving to Germany or Italy would present a structural threat. Why?",
+    "a": "UK-managed staff would face severe communication and language barriers, causing the model to collapse and forcing the company to hire local staff instead.",
+    "b": "Germany and Italy legally prohibit bespoke software development by foreign-owned firms.",
+    "c": "The corporate health insurance models in Germany and Italy are entirely funded by local municipal councils rather than companies.",
+    "d": "The daily charge rates in southern Europe are automatically pegged to London retail price indices.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "In long-term strategic planning, what unique risk does Syniad face if it chooses to expand internationally by buying an existing foreign company rather than building from scratch?",
+    "a": "It requires zero initial capital injection, causing a severe cash surplus that breaks the budget matrix.",
+    "b": "It forces the immediate conversion of all technical staff into non-revenue earning secretarial overhead.",
+    "c": "There may be difficulties in integration, and staff in the acquired company might become unhappy about the change of ownership and leave rapidly, destroying the investment value.",
+    "d": "The acquired firm is legally barred from adopting centralized policies by general consent.",
+    "correctAnswer": "c"
+  }
+]

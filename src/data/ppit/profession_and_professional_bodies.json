@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Which of the following best describes the core characteristic of a 'professional' as opposed to a skilled worker?",
+    "a": "A professional is primarily motivated by personal convenience and flexible working hours.",
+    "b": "A professional consistently places the interests of the organization and public interest above personal convenience, carrying out work competently regardless of circumstances.",
+    "c": "A professional relies entirely on self-taught methods and avoids external regulation.",
+    "d": "A professional prioritizes profit and speed over safety and regulatory compliance.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "If a government introduces a law stating that individuals can only use the title 'Registered Software Architect' if they are listed on an official board, but does not restrict the actual practice of software design to those individuals, which concept is being applied?",
+    "a": "Reservation of function",
+    "b": "Industry self-regulation",
+    "c": "Reservation of title",
+    "d": "Global standard alignment",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "A country passes legislation stating that only individuals registered with a specific professional body are legally permitted to perform safety-critical data auditing. This is an example of:",
+    "a": "Reservation of function",
+    "b": "Reservation of title",
+    "c": "Voluntary certification",
+    "d": "De-licensing",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "In the context of professional engineering, what two primary constraints govern all designing and building activities?",
+    "a": "Using only open-source tools and minimizing team size.",
+    "b": "Meeting predetermined functionality, performance, and reliability requirements while staying within specified time and budget limitations.",
+    "c": "Maximizing commercial profit and accelerating market entry without initial requirements testing.",
+    "d": "Ensuring universal international adoption and avoiding any government interaction.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What fundamental issue often arises when professional bodies attempt to take disciplinary action against members based on a code of conduct?",
+    "a": "Disciplinary action can only be effectively taken when a broken rule is precisely specified and objective, rather than vague.",
+    "b": "Members are legally immune to any form of professional disciplinary action.",
+    "c": "Vague rules are easier to enforce than objective, precise rules.",
+    "d": "Codes of conduct only apply to standard grades and ignore chartered professional grades.",
+    "correctAnswer": "a"
+  },
+  {
+    "question": "Which of the following is a major challenge encountered when trying to establish a uniform, compulsory licensing system for software engineers?",
+    "a": "Software engineering roles are too narrow and never change.",
+    "b": "The rapid pace of technological advancements makes it difficult for slow-moving licensing processes to keep up.",
+    "c": "Software development is local and never involves cross-border collaboration.",
+    "d": "Academic degrees in computer science are identical all over the world.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Why might the introduction of mandatory legal licensing requirements for all software developers be viewed as a negative factor by some industry experts?",
+    "a": "It would guarantee that no software ever contains bugs.",
+    "b": "It could act as a barrier to entry, potentially hindering innovation and the dynamic, creative nature of the software industry.",
+    "c": "It completely eliminates the need for any continuing professional development.",
+    "d": "It forces companies to rely exclusively on international self-regulation frameworks.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Under the BCS Code of Conduct, if a software engineer notices that a system feature discriminates against users based on age or disability, which specific section of the code are they primarily obligated to uphold by addressing this issue?",
+    "a": "Duty to Relevant Authority",
+    "b": "Duty to Profession",
+    "c": "The Public Interest",
+    "d": "Professional Competence and Integrity",
+    "correctAnswer": "c"
+  },
+  {
+    "question": "An IT professional is asked by their employer to manage a highly complex cryptography project, but the professional lacks experience and training in advanced security techniques. According to the principles of professional competence, the professional should:",
+    "a": "Accept the project to gain experience on the job without informing the client of any limitations.",
+    "b": "Only undertake work or claim levels of competence that they actually possess, and seek to develop knowledge on a continuing basis.",
+    "c": "Subcontract the work secretly to a third party without telling the relevant authority.",
+    "d": "Falsify their certification records to satisfy the client's administrative requirements.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is the primary conceptual difference between a 'Code of Conduct' and a 'Code of Practice' within professional computing environments?",
+    "a": "A code of conduct dictates business profits, while a code of practice dictates legal penalties.",
+    "b": "A code of conduct establishes standard behaviors expected of members in their professional life, while a code of practice outlines the best technical or operational ways to practice the profession.",
+    "c": "A code of conduct is voluntary for members, whereas a code of practice applies only to non-members.",
+    "d": "There is no difference; both terms refer strictly to state government registration registries.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Under the 'Duty to Relevant Authority' clause, how should a professional handle confidential information obtained during their employment?",
+    "a": "They may disclose it if it benefits a close colleague or brings personal financial gain.",
+    "b": "They must not disclose or authorize disclosure of confidential information, nor use it for personal gain, unless explicit permission is granted by the Relevant Authority.",
+    "c": "They are free to share it publicly once they leave the company without any restrictions.",
+    "d": "They should withhold information regarding product failures from the authority to protect the company's reputation.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "How do professional bodies like the BCS actively support Continuing Professional Development (CPD) for individual members?",
+    "a": "By offering static degrees that require no further updating throughout a career.",
+    "b": "By providing structures for recording and assessing development, alongside publications and channels to keep members aware of new advancements.",
+    "c": "By legally banning members from reading research journals published by competing societies.",
+    "d": "By guaranteeing job promotions and automatic salary increases every month.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "The software failures in historical systems like the Therac-25 machine highlight the critical necessity for software engineers to:",
+    "a": "Rely entirely on computer-only safety mechanisms without hardware backups.",
+    "b": "Apply strict professionalism, solid architectural concepts, and recognize the boundary between critical and non-critical systems.",
+    "c": "Avoid working on any system that involves hardware interactions.",
+    "d": "Ignore peer reviews and speed up development timelines to meet budgets.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "When an independent accreditation council evaluates and monitors computing degree programs at universities, what is the primary structural benefit to the profession?",
+    "a": "It ensures a monopoly where only one university is allowed to teach computing.",
+    "b": "It establishes and maintains standardized quality education benchmarks, reassuring the public and employers of graduate competency levels.",
+    "c": "It eliminates the need for students to ever join professional bodies after graduation.",
+    "d": "It automatically grants legal state registration licenses to all first-year students.",
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which of the following actions directly violates the 'Duty to Profession' section of a computing professional code of conduct?",
+    "a": "Participating in the development and enforcement of higher industry standards.",
+    "b": "Taking malicious actions that bring the profession into disrepute or degrading the standing of the professional body.",
+    "c": "Supporting fellow members in their career development pathways.",
+    "d": "Respecting alternative technical viewpoints during a system architecture meeting.",
+    "correctAnswer": "b"
+  }
+]

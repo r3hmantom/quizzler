@@ -1,0 +1,147 @@
+[
+    {
+      "question": "In a highly bureaucratic organization, how is the issue of coordination between different tasks primarily managed?",
+      "a": "Through spontaneous informal interactions among front-line employees.",
+      "b": "By establishing strict rules governing the performance of each individual task to eliminate variation.",
+      "c": "Through regular cross-functional meetings led by project managers.",
+      "d": "By encouraging employees to adapt their roles based on situational requirements.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "Which of the following describes an inherent risk to individual employee behavior within a strict Bureaucratic Model?",
+      "a": "It fosters excessive risk-taking due to decentralized choice.",
+      "b": "It breeds role ambiguity because tasks are shared dynamically.",
+      "c": "It restricts personal freedom, resulting in passive, rule-bound individuals.",
+      "d": "It causes high role conflict due to employees reporting to multiple managers.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "An organization operating under the Organic Model (Likert) focuses primarily on which structural environment?",
+      "a": "Maximizing standardization so that employee output is highly predictable.",
+      "b": "Cultivating supportive relationships that build a sense of personal worth and importance.",
+      "c": "Enforcing vertical communication paths to guarantee accountability.",
+      "d": "Structuring positions around strict seniority-based promotion paths.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "How does the manager's primary role shift when moving from a Bureaucratic Model to an Organic Model?",
+      "a": "From enforcing direct supervision to helping employees achieve their work.",
+      "b": "From handling policy making to strictly monitoring standard operating procedures.",
+      "c": "From overseeing specialist roles to managing a strict tree-like hierarchy.",
+      "d": "From managing individual performance to resolving dual-reporting authority conflicts.",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "Which set of characteristics is most representative of an Organic organizational structure?",
+      "a": "Narrow span of control, high formalization, and centralized decision-making.",
+      "b": "Wide span of control, low formalization, and decentralized decision-making.",
+      "c": "Strict horizontal specialization, fixed salaries, and rigid rule enforcement.",
+      "d": "Dual-reporting lines, high formalization, and reliance on formal authority over expertise.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What fundamental structural limitation of the Bureaucratic Model does Matrix Management directly attempt to resolve?",
+      "a": "The lack of clear lines of accountability for individual workers.",
+      "b": "The high operational costs associated with administrative duplication.",
+      "c": "The overly restrictive nature of rigid hierarchies when dealing with project-based work.",
+      "d": "The tendency to favor seniority over achievement during internal promotions.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which of the following is a major systemic disadvantage often encountered in Matrix Management?",
+      "a": "A total lack of specialized skills among team members.",
+      "b": "Decreased innovation due to over-reliance on standard operating procedures.",
+      "c": "Potential loss of accountability and internal conflicts from dual-reporting lines.",
+      "d": "Inability to adapt to dynamic, changing environments.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "When an organization structures itself by Function, how are activities grouped?",
+      "a": "By the specific type of technology used to build the product.",
+      "b": "By the distinct geographic region or market sector of the customer base.",
+      "c": "By primary specialized business disciplines such as Operations, Administration, and Sales.",
+      "d": "By individual temporary project teams that dissolve upon task completion.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Why do multinational companies often choose a Structure by Geography for their sales and marketing activities?",
+      "a": "To minimize the total number of layers in their management span of control.",
+      "b": "To ensure that local operations can adapt easily to linguistic and cultural factors.",
+      "c": "To prevent divisions from becoming completely unaware of each other's expertise.",
+      "d": "To optimize centralized decision-making from corporate headquarters.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What is a primary disadvantage of structuring an organization strictly around Market Sectors?",
+      "a": "It makes it difficult for sales staff to understand their customers' problems.",
+      "b": "It creates excessive focus on technology rather than customer needs.",
+      "c": "Divisions can become isolated from each other's expertise, causing the company to miss new opportunities.",
+      "d": "It results in high formalization and narrow, tightly defined routine jobs.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "A software company structures its divisions strictly by Technology (e.g., AI, Web-based systems). What major operational challenge are they likely to face?",
+      "a": "They become overly focused on selling the specific technologies they have rather than being customer-centric.",
+      "b": "They suffer from a total lack of specialized technical officials.",
+      "c": "Their internal cross-functional teams will suffer from a lack of technical competence.",
+      "d": "Employees will find it impossible to adapt to dynamic project plans.",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "How do Production-based operational structures differ fundamentally from Project-based operational structures regarding the employee environment?",
+      "a": "Production-based structures feature a rapidly changing environment with constantly changing clients.",
+      "b": "Project-based structures feature slower, more gradual changes in workplace environment.",
+      "c": "Project-based structures subject employees to constantly changing teams, environments, and clients.",
+      "d": "Production-based structures eliminate the need for centralized administrative departments like finance.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What is the primary relationship between the depth of an organizational structure and the span of control?",
+      "a": "A deeper structure with more management layers typically features a wider span of control.",
+      "b": "A flatter structure with fewer management layers typically features a wider span of control.",
+      "c": "The number of structural layers has no geometric relationship to a manager's span of control.",
+      "d": "Flatter structures require narrow spans of control to maintain basic bureaucratic hierarchy.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "In structural design theory, which type of industry is most likely to benefit from a highly Decentralized power structure?",
+      "a": "A long-established, traditional heavy manufacturing company.",
+      "b": "A highly standardized corporate administration department.",
+      "c": "A high-tech or professional software development company operating in a dynamic market.",
+      "d": "An assembly line facility focused heavily on predictable standard operating procedures.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "When a medium-sized software company balances its internal operations using both technical and application criteria, under what condition should it group its projects primarily by technology?",
+      "a": "When the primary operational risks and problems are technical in nature.",
+      "b": "When understanding customer market sector considerations is the absolute priority.",
+      "c": "When the organization decides to eliminate its finance and administration departments.",
+      "d": "When it wants to maximize structural depth and narrow the span of control.",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "Large, diversified global corporations frequently utilize a \"Mixed Structure.\" What does this typically involve?",
+      "a": "A complete abandonment of formal rules in favor of localized, organic decision-making.",
+      "b": "Combining product lines for major divisions, functional designs for support services, and geographic regions for localized operations.",
+      "c": "Forcing all employees to report to a minimum of three distinct managers simultaneously across all tasks.",
+      "d": "Using a strict tree hierarchy for operations while making sales teams entirely unstructured.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What is a major human resource consequence of extreme job specialization and narrow, tightly defined jobs within a bureaucratic layout?",
+      "a": "Low employee turnover due to extreme clarity of tasks.",
+      "b": "High employee turnover driven by dull, unsatisfying, and repetitive routines.",
+      "c": "Spontaneous development of cross-functional and cross-hierarchical skills.",
+      "d": "An increased sense of personal worth and individual freedom.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "How can an organization apply Job Enlargement to combat the unpopularity and specialization extremes of a task like basic software implementation?",
+      "a": "By automating the task completely so employees do not have to perform it.",
+      "b": "By rotating the employee to an entirely unrelated department like sales and marketing.",
+      "c": "By expanding the role horizontally to include preceding and succeeding steps like analysis, specification, and testing.",
+      "d": "By increasing the layers of management supervision over the employee's work.",
+      "correctAnswer": "c"
+    }
+  ]
+  

@@ -1,0 +1,98 @@
+[
+    {
+      "question": "Why do start-up companies typically require capital before they begin generating revenue from operations? [cite: 4, 8, 9]",
+      "a": "Because customers generally pay in advance for long-term services.",
+      "b": "Because there is a time lag between providing services or developing products and receiving payment, while regular operating expenses and living costs must be met immediately.",
+      "c": "Because startup grants require companies to prove they have zero initial operational expenses.",
+      "d": "Because debt instruments like corporate bonds require immediate principal repayment upon company formation.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What is the primary purpose of a business plan when presenting it to potential funders? [cite: 29, 30]",
+      "a": "To provide a binding legal guarantee of immediate quarterly profitability.",
+      "b": "To convince funders that the plan is well-thought-out, realistic, technically feasible, and backed by appropriate expertise.",
+      "c": "To outline the exact allocation of authorized capital versus issued shares among the founders.",
+      "d": "To secure an unconditional bank overdraft facility that cannot be rescinded.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "According to the provided material, a comprehensive business plan's financial prediction section should ideally contain which elements? [cite: 41]",
+      "a": "Marketing advertisements, competitor directories, and customer testimonials.",
+      "b": "Personal credit scores, grant applications, and collateral evaluation deeds.",
+      "c": "Budgets, cash flow predictions, projected balance sheets, and profit and loss accounts.",
+      "d": "Corporate bond registration certificates and liquidation recovery strategies.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which of the following is a key operational characteristic or limitation of business grants? [cite: 44, 45, 46]",
+      "a": "They require the immediate issuance of high-interest corporate bonds to the government.",
+      "b": "They cover 100% of the long-term operational costs of a start-up with no strings attached.",
+      "c": "They are usually intended for capital investments like premises and equipment, are subject to raising capital from other sources, and cover only a limited proportion of the investment.",
+      "d": "They allow the funding body to seize personal assets of the founders in the case of business liquidation.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "If a start-up defaults on a loan and the sale of its corporate assets is insufficient to cover the debt, what can a lender do if personal guarantees were established? [cite: 53, 56]",
+      "a": "Automatically convert the outstanding loan balance into equity capital.",
+      "b": "Recover the remaining loan value from the personal assets of the individuals who guaranteed it.",
+      "c": "Legally claim the company's target market and proprietary business plan.",
+      "d": "Force the government to subsidize the unpaid interest under a soft-loan program.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "Why are overdraft facilities considered a high-risk source of finance for a start-up company? [cite: 57, 58]",
+      "a": "They always carry higher interest rates than corporate bonds and cannot be used for miscellaneous expenses.",
+      "b": "A bank can unexpectedly withdraw the overdraft facility, which can directly cause the liquidation of the company.",
+      "c": "They require the company to immediately surrender a significant share of equity capital to the bank.",
+      "d": "They can only be used to pay for long-term capital investments such as premises and heavy equipment.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What primary features distinguish long-term commercial loans from soft loans? [cite: 64, 65, 70, 71]",
+      "a": "Long-term loans never require principal repayment, whereas soft loans must be repaid within a fixed period.",
+      "b": "Long-term loans are equity-based instruments, while soft loans are strictly short-term overdrafts.",
+      "c": "Long-term loans feature a fixed period and rate where the lender cannot call it in if interest is paid on time; soft loans offer lower interest rates and are specifically designed for start-ups.",
+      "d": "Long-term loans are funded exclusively by business angels, whereas soft loans are issued via corporate bonds.",
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Why are corporate bonds explicitly referred to as 'fixed-income securities'? [cite: 72]",
+      "a": "Because they guarantee that the start-up's net profit will remain fixed throughout the fiscal year.",
+      "b": "Because they pay a specified, regular amount of interest to the investor over their duration.",
+      "c": "Because they prevent the company from raising any further equity capital from venture capitalists.",
+      "d": "Because the principal amount is fixed and cannot be recovered during liquidation.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "How do equity capital providers, such as business angels and venture capitalists, primarily expect to earn a profit? [cite: 74]",
+      "a": "By receiving regular fixed-interest payments that are senior to all bank loans.",
+      "b": "By helping expand the company and later selling their acquired shares at a profit.",
+      "c": "By enforcing personal guarantees against the founders if the business fails.",
+      "d": "By converting short-term operational grants into long-term corporate debt instruments.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "In corporate finance, what does the concept of 'gearing' or 'leverage' describe? [cite: 75]",
+      "a": "The structural operational efficiency of a company's marketing and advertising campaigns.",
+      "b": "The relationship and ratio between loan capital (debt) and equity capital within a company.",
+      "c": "The speed at which a start-up can fulfill client orders and receive cash payments.",
+      "d": "The disparity between a company's authorized capital and its actual current cash reserves.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "From a lender's point of view, why can a high level of gearing be highly undesirable? [cite: 77]",
+      "a": "It indicates that shareholders have committed too much of their own money to interest payments.",
+      "b": "It may encourage shareholders to trade recklessly because they have less of their own capital at stake relative to the debt.",
+      "c": "It forces the lender to assume direct operational management of the start-up's day-to-day services.",
+      "d": "It automatically converts the fixed-income corporate bonds into low-rate soft loans.",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "From a shareholder's perspective, what is a primary risk associated with operating a highly geared company? [cite: 77]",
+      "a": "The company becomes legally ineligible to apply for any future short-term government grants.",
+      "b": "Too much of the company's generated money is committed to fixed loan interest payments, leaving less profit or buffer for the owners.",
+      "c": "Lenders automatically gain majority voting control over the board without investing additional capital.",
+      "d": "The bank will automatically withdraw all available equity capital and trigger immediate liquidation.",
+      "correctAnswer": "b"
+    }
+  ]
