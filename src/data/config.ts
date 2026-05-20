@@ -7,20 +7,20 @@ export interface SubjectConfig {
   description?: string;
 }
 
-// Define all subjects and their properties here
+// Optional overrides for folders under src/data (subjects are auto-discovered from JSON files).
+// Match "path" to the folder name, e.g. src/data/leadership → path: "leadership"
 export const subjects: SubjectConfig[] = [
   {
     name: "Leadership",
     path: "leadership",
-    color: "#64c2a6", // Teal
-    description: "Explore leadership quizzes"
+    color: "#64c2a6",
+    description: "Explore leadership quizzes",
   },
-  // Add more subjects here as needed
-  // Example:
+  // Example override for src/data/ppit:
   // {
-  //   name: "Mathematics",
-  //   path: "mathematics",
-  //   color: "#ffde59", // Yellow
-  //   description: "Explore mathematics quizzes"
+  //   name: "PPIT",
+  //   path: "ppit",
+  //   color: "#ffde59",
+  //   description: "Explore PPIT quizzes",
   // },
 ]; 

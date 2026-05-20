@@ -8,7 +8,6 @@ import {
   clearQuizState,
   clearSessionInfo,
   clearLastSelectedQuiz,
-  loadQuizState,
   saveSessionInfo,
   saveLastSelectedQuiz,
   getPausedSessionDisplay,
@@ -28,22 +27,13 @@ function App() {
     resumeQuiz,
   } = useQuiz();
 
-  const [showQuizBrowser, setShowQuizBrowser] = useState(() => {
-    const saved = loadQuizState();
-    return !(saved?.hasStarted && !saved.isComplete);
-  });
+  const [showQuizBrowser, setShowQuizBrowser] = useState(true);
 
   useEffect(() => {
     migrateLegacyQuizzes();
     // Hydrate resume banner labels for paused sessions missing metadata
-    if (showQuizBrowser) getPausedSessionDisplay();
+    getPausedSessionDisplay();
   }, []);
-
-  useEffect(() => {
-    if (state.hasStarted && !state.isComplete) {
-      setShowQuizBrowser(false);
-    }
-  }, [state.hasStarted, state.isComplete]);
 
   useEffect(() => {
     const handleNavigateToSubjects = () => {

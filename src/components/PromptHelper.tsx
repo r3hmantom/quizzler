@@ -40,7 +40,7 @@ export default function PromptHelper({ isOpen, onClose }: PromptHelperProps) {
             
             <div className="mb-3">
               <h3 className="mb-2">Step 3: Add Your Content</h3>
-              <p>Replace the placeholder text "[PASTE YOUR CONTENT HERE]" with any content you want to create a quiz for, such as:</p>
+              <p>In the same message, paste the study material you want quizzed on (after the prompt or in a follow-up), such as:</p>
               <ul className="mb-2" style={{ listStyleType: 'disc', paddingLeft: '1.5rem' }}>
                 <li>Articles or blog posts</li>
                 <li>Book chapters or summaries</li>

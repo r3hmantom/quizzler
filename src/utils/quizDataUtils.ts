@@ -1,5 +1,5 @@
 import { QuizQuestion } from "../types";
-import { subjects, SubjectConfig } from "../data/config";
+import { subjects as subjectConfigOverrides } from "../data/config";
 import {
   getUserSubjects,
   getUserQuizzesBySubject,
@@ -27,16 +27,64 @@ export interface QuizInfo {
   userQuizId?: string;
 }
 
+const DATA_JSON_GLOB = import.meta.glob("../data/**/*.json", { eager: true });
+
+const DEFAULT_SUBJECT_COLORS = [
+  "#64c2a6",
+  "#ffde59",
+  "#ff6b6b",
+  "#4d96ff",
+  "#9b5de5",
+  "#f15bb5",
+];
+
+function formatSubjectNameFromPath(path: string): string {
+  return path
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+/** Subject folders under src/data that contain at least one quiz JSON file. */
+export function discoverBuiltInSubjectPaths(): string[] {
+  const paths = new Set<string>();
+
+  for (const fullPath of Object.keys(DATA_JSON_GLOB)) {
+    const rel = fullPath.includes("../data/")
+      ? fullPath.substring(fullPath.indexOf("../data/") + "../data/".length)
+      : fullPath;
+    const segments = rel.split("/");
+    if (segments.length >= 2) {
+      paths.add(segments[0]);
+    }
+  }
+
+  return [...paths].sort();
+}
+
+/** Built-in subjects from data folder, with optional overrides from config.ts. */
+export function getBuiltInSubjects(): SubjectInfo[] {
+  return discoverBuiltInSubjectPaths().map((path, index) => {
+    const override = subjectConfigOverrides.find((s) => s.path === path);
+    const displayName = override?.name ?? formatSubjectNameFromPath(path);
+    return {
+      name: displayName,
+      path,
+      color: override?.color ?? DEFAULT_SUBJECT_COLORS[index % DEFAULT_SUBJECT_COLORS.length],
+      description:
+        override?.description ?? `Explore ${displayName} quizzes`,
+      isUserCreated: false,
+    };
+  });
+}
+
+export function getBuiltInSubjectByPath(path: string): SubjectInfo | undefined {
+  return getBuiltInSubjects().find((s) => s.path === path);
+}
+
 // Get all available subjects (built-in + user-created from local storage)
 export async function getSubjects(): Promise<SubjectInfo[]> {
   try {
-    const builtIn: SubjectInfo[] = subjects.map((s) => ({
-      name: s.name,
-      path: s.path,
-      color: s.color,
-      description: s.description,
-      isUserCreated: false,
-    }));
+    const builtIn = getBuiltInSubjects();
     const userSubjects = getUserSubjects().map(userSubjectToInfo);
     return [...builtIn, ...userSubjects];
   } catch (error) {
@@ -45,9 +93,9 @@ export async function getSubjects(): Promise<SubjectInfo[]> {
   }
 }
 
-// Get subject by name
-export function getSubjectByName(name: string): SubjectConfig | undefined {
-  return subjects.find(subject => subject.name === name);
+// Get built-in subject by display name
+export function getSubjectByName(name: string): SubjectInfo | undefined {
+  return getBuiltInSubjects().find((subject) => subject.name === name);
 }
 
 // Get all quizzes for a specific subject
@@ -76,41 +124,24 @@ export async function getQuizzesBySubject(
       }));
     }
 
-    const configSubject = getSubjectByName(subject);
-    if (!configSubject) {
-      return [];
-    }
-
-    const formattedSubject = configSubject.path.toLowerCase();
+    const formattedSubject = subjectInfo.path.toLowerCase();
     const quizzes: QuizInfo[] = [];
-    
-    // Dynamically import all files from the subject directory
-    const context = import.meta.glob("../data/**/*.json", { eager: true });
-    
-    // Debug which files were found
-    console.log("Found files:", Object.keys(context));
-    
-    // Filter files that match the subject path
-    for (const fullPath of Object.keys(context)) {
-      // Make sure this is a file in the correct subject directory
+
+    for (const fullPath of Object.keys(DATA_JSON_GLOB)) {
       if (fullPath.includes(`/${formattedSubject}/`)) {
-        // Extract filename from the path
         const pathParts = fullPath.split("/");
         const fileName = pathParts[pathParts.length - 1];
         const title = formatTitle(fileName);
-        
-        // The path we want is the part after ../data/ but without the .json extension
+
         const relativePath = fullPath
           .substring(fullPath.indexOf("../data/") + "../data/".length)
           .replace(/\.json$/, "");
-        
-        console.log(`Adding quiz: "${title}" with path: "${relativePath}" from full path: "${fullPath}"`);
-        
+
         quizzes.push({
           title,
           path: relativePath,
           fileName,
-          subject: configSubject.name,
+          subject: subjectInfo.name,
         });
       }
     }
@@ -134,7 +165,7 @@ export async function loadQuizQuestions(path: string): Promise<QuizQuestion[]> {
     console.log(`Attempting to load quiz from path: ${path}`);
     
     // Use dynamic import with the full path
-    const modules = import.meta.glob("../data/**/*.json", { eager: true });
+    const modules = DATA_JSON_GLOB;
     
     // Construct multiple possible paths to try
     const possiblePaths = [
@@ -196,10 +227,8 @@ export function guessQuizMetaFromQuestions(
 ): QuizSessionMeta | null {
   if (!questions.length) return null;
 
-  const modules = import.meta.glob("../data/**/*.json", { eager: true });
-
-  for (const fullPath of Object.keys(modules)) {
-    const module = modules[fullPath] as { default?: QuizQuestion[] };
+  for (const fullPath of Object.keys(DATA_JSON_GLOB)) {
+    const module = DATA_JSON_GLOB[fullPath] as { default?: QuizQuestion[] };
     const qs = (module.default || module) as QuizQuestion[];
     if (!Array.isArray(qs) || qs.length !== questions.length) continue;
     if (qs[0]?.question !== questions[0]?.question) continue;
@@ -208,12 +237,12 @@ export function guessQuizMetaFromQuestions(
       .substring(fullPath.indexOf("../data/") + "../data/".length)
       .replace(/\.json$/, "");
     const subjectPath = relativePath.split("/")[0];
-    const subject = subjects.find((s) => s.path === subjectPath);
+    const subject = getBuiltInSubjectByPath(subjectPath);
     const fileSegment = relativePath.split("/").pop() ?? "";
     const title = fileSegment.replace(/_/g, " ");
 
     return {
-      subjectName: subject?.name ?? subjectPath,
+      subjectName: subject?.name ?? formatSubjectNameFromPath(subjectPath),
       quizTitle: title,
       quizPath: relativePath,
     };

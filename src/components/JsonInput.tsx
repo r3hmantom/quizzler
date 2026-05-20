@@ -58,35 +58,51 @@ export default function JsonInput({
   };
 
   const copyQuizPrompt = () => {
-    const quizGeneratorPrompt = `Quiz Generator Prompt
-To generate high-quality, multiple-choice quizzes in JSON format from any content you provide, please use the following prompt:
-Please analyze the content I've provided and create a comprehensive multiple-choice quiz that tests understanding of the key concepts, facts, and relationships. Generate the quiz in valid JSON format with the following structure:
+    const quizGeneratorPrompt = `Analyze the provided content and create a comprehensive concept-based multiple-choice quiz in valid JSON format.
+
+IMPORTANT:
+- Do NOT focus on memorizing names, dates, locations, people, organizations, or case-study-specific details unless they are essential to understanding the concept.
+- Extract the GENERAL concepts, principles, theories, relationships, methods, and applications from the content.
+- Treat examples, stories, and case studies only as tools for teaching broader concepts.
+
+The quiz should test:
+- conceptual understanding
+- application of ideas
+- reasoning and analysis
+- cause/effect relationships
+- comparisons and differences
+- problem-solving ability
+- practical understanding
+- theoretical understanding
+
+Avoid:
+- rote memorization questions
+- trivial details
+- direct copy-paste lines from the material
+- overly obvious options
+- ambiguous wording
+- trick questions
+
+Requirements:
+- Cover ALL important concepts from the content
+- Generate as many MCQs as needed for full conceptual coverage
+- Each question must have exactly ONE clearly correct answer
+- Incorrect options should be plausible but clearly incorrect
+- Questions should resemble university or competitive exam conceptual MCQs
+- Include a balanced mix of easy, medium, and difficult questions
+
+Return ONLY valid JSON in this exact format:
 
 [
   {
-    "question": "Clear, concise question about an important concept",
-    "a": "First option",
-    "b": "Second option",
-    "c": "Third option",
-    "d": "Fourth option",
-    "correctAnswer": "letter of correct option"
-  },
-  ...additional questions...
-]
-
-Guidelines for creating effective questions:
-- Focus on important concepts rather than trivial details
-- Include a mix of fact recall, conceptual understanding, and application questions
-- Ensure all questions have one clearly correct answer
-- Make incorrect options plausible but clearly wrong
-- Avoid ambiguous wording or trick questions
-- Cover the full breadth of the content
-- Create 10-15 questions total
-- Ensure the JSON is properly formatted and valid
-
-The content I want you to create a quiz for is:
-
-[PASTE YOUR CONTENT HERE]`;
+    "question": "Question text",
+    "a": "Option A",
+    "b": "Option B",
+    "c": "Option C",
+    "d": "Option D",
+    "correctAnswer": "a"
+  }
+]`;
 
     navigator.clipboard.writeText(quizGeneratorPrompt)
       .then(() => {

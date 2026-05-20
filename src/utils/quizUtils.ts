@@ -1,7 +1,6 @@
 import { QuizQuestion, QuizState, QuizSessionMeta } from '../types';
 import { getUserQuiz, getUserSubjects } from './userLibraryStorage';
-import { subjects } from '../data/config';
-import { guessQuizMetaFromQuestions } from './quizDataUtils';
+import { guessQuizMetaFromQuestions, getBuiltInSubjectByPath } from './quizDataUtils';
 
 const STORAGE_KEY = 'quizzler-state';
 const SESSION_INFO_KEY = 'quizzler-session-info';
@@ -54,7 +53,7 @@ function resolveSubjectName(path?: string, savedName?: string): string | undefin
     return getUserSubjects().find((s) => s.id === quiz.subjectId)?.name;
   }
   const subjectPath = path.split('/')[0];
-  return subjects.find((s) => s.path === subjectPath)?.name;
+  return getBuiltInSubjectByPath(subjectPath)?.name;
 }
 
 export const saveLastSelectedQuiz = (meta: QuizSessionMeta): void => {

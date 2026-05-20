@@ -36,23 +36,12 @@ Adding a new quiz is now simplified to these easy steps:
 
 ## Adding a New Subject
 
-To add a new subject:
-
-1. **Edit the configuration file** at `src/data/config.ts`
-2. **Add your subject to the subjects array**:
-   ```typescript
-   {
-     name: "Your Subject Name",
-     path: "your_subject_path",
-     color: "#hexcolor", // Choose a color
-     description: "Optional description text"
-   }
-   ```
-3. **Create the subject directory**:
+1. **Create a folder** under `src/data/` (folder name = subject path, e.g. `ppit`):
    ```
    mkdir -p src/data/your_subject_path
    ```
-4. **Add quiz files** to your new subject directory
+2. **Add quiz JSON files** inside that folder — the subject appears automatically in the app.
+3. **Optional:** Customize display name, color, or description in `src/data/config.ts` (match `path` to the folder name).
 
 ## Filename Conventions
 
