@@ -6,14 +6,10 @@ interface ResultsProps {
   score: number;
   totalQuestions: number;
   onRestart: () => void;
-  onSaveQuiz: (name: string) => void;
   problematicQuestions: { question: QuizQuestion; incorrectCount: number }[];
 }
 
-export default function Results({ score, totalQuestions, onRestart, onSaveQuiz, problematicQuestions }: ResultsProps) {
-  const [quizName, setQuizName] = useState('');
-  const [showSaveForm, setShowSaveForm] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
+export default function Results({ score, totalQuestions, onRestart, problematicQuestions }: ResultsProps) {
   const [showProblematicQuestions, setShowProblematicQuestions] = useState(false);
   
   // Calculate percentage score - based on total unique questions
@@ -55,14 +51,6 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz, 
       return "👍";
     } else {
       return "💪";
-    }
-  };
-
-  const handleSaveQuiz = () => {
-    if (quizName.trim()) {
-      onSaveQuiz(quizName.trim());
-      setIsSaved(true);
-      setShowSaveForm(false);
     }
   };
 
@@ -144,62 +132,10 @@ export default function Results({ score, totalQuestions, onRestart, onSaveQuiz, 
       )}
       
       <div className="mb-4">
-        {showSaveForm ? (
-          <div className="save-form" style={{ maxWidth: '400px', margin: '0 auto' }}>
-            <input
-              type="text"
-              className="neu-input mb-2"
-              placeholder="Enter a name for this quiz"
-              value={quizName}
-              onChange={(e) => setQuizName(e.target.value)}
-            />
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-              <button 
-                className="neu-button secondary"
-                onClick={() => setShowSaveForm(false)}
-              >
-                Cancel
-              </button>
-              <button 
-                className="neu-button"
-                onClick={handleSaveQuiz}
-                disabled={!quizName.trim()}
-              >
-                Save Problematic Questions
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <button 
-              className="neu-button"
-              onClick={onRestart}
-            >
-              Try Again
-            </button>
-            
-            {!isSaved && (
-              <button 
-                className="neu-button secondary"
-                onClick={() => setShowSaveForm(true)}
-              >
-                Save Quiz
-              </button>
-            )}
-          </div>
-        )}
+        <button className="neu-button" onClick={onRestart}>
+          Back to Subjects
+        </button>
       </div>
-      
-      {isSaved && (
-        <motion.p 
-          className="mb-2" 
-          style={{ color: 'var(--correct)', fontWeight: 500 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          Quiz saved successfully!
-        </motion.p>
-      )}
       
       <p style={{ fontSize: '0.9rem', marginTop: '2rem', opacity: 0.8 }}>
         Thank you for using Quizzler!

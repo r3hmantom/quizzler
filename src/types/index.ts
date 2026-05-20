@@ -7,6 +7,12 @@ export interface QuizQuestion {
   correctAnswer: 'a' | 'b' | 'c' | 'd';
 }
 
+export interface QuizSessionMeta {
+  subjectName: string;
+  quizTitle: string;
+  quizPath?: string;
+}
+
 export interface QuizState {
   questions: QuizQuestion[];
   currentQuestionIndex: number;
@@ -16,6 +22,9 @@ export interface QuizState {
   totalQuestions: number;
   isComplete: boolean;
   hasStarted: boolean;
+  subjectName?: string;
+  quizTitle?: string;
+  quizPath?: string;
 }
 
 export type AnswerOption = 'a' | 'b' | 'c' | 'd'; 

@@ -4,9 +4,15 @@ import { SubjectInfo, getSubjects, getSubjectColor } from '../utils/quizDataUtil
 
 interface SubjectListProps {
   onSelectSubject: (subject: SubjectInfo) => void;
+  onManageSubjects: () => void;
+  refreshKey?: number;
 }
 
-export default function SubjectList({ onSelectSubject }: SubjectListProps) {
+export default function SubjectList({
+  onSelectSubject,
+  onManageSubjects,
+  refreshKey = 0,
+}: SubjectListProps) {
   const [subjects, setSubjects] = useState<SubjectInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -27,7 +33,7 @@ export default function SubjectList({ onSelectSubject }: SubjectListProps) {
     };
 
     loadSubjects();
-  }, []);
+  }, [refreshKey]);
 
   if (loading) {
     return (
@@ -50,33 +56,70 @@ export default function SubjectList({ onSelectSubject }: SubjectListProps) {
     );
   }
 
+  const builtIn = subjects.filter((s) => !s.isUserCreated);
+  const userCreated = subjects.filter((s) => s.isUserCreated);
+
+  const renderSubjectCard = (subject: SubjectInfo, index: number) => (
+    <motion.div
+      key={subject.path}
+      className="subject-card"
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05 }}
+      onClick={() => onSelectSubject(subject)}
+    >
+      <div
+        className="neu-container"
+        style={{
+          padding: '1.5rem',
+          cursor: 'pointer',
+          backgroundColor: getSubjectColor(subject.name),
+        }}
+      >
+        <h2 style={{ marginBottom: '0.5rem' }}>{subject.name}</h2>
+        <p>{subject.description || `Explore ${subject.name.toLowerCase()} quizzes`}</p>
+        {subject.isUserCreated && (
+          <span className="badge-user">Your subject</span>
+        )}
+      </div>
+    </motion.div>
+  );
+
   return (
     <div className="neu-container">
       <h1 className="text-center mb-4">Select a Subject</h1>
-      
-      <div className="subjects-grid">
-        {subjects.map((subject, index) => (
-          <motion.div
-            key={subject.name}
-            className="subject-card"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            onClick={() => onSelectSubject(subject)}
-          >
-            <div className="neu-container" style={{ 
-              padding: '1.5rem',
-              cursor: 'pointer',
-              backgroundColor: getSubjectColor(subject.name)
-            }}>
-              <h2 style={{ marginBottom: '0.5rem' }}>{subject.name}</h2>
-              <p>{subject.description || `Explore ${subject.name.toLowerCase()} quizzes`}</p>
-            </div>
-          </motion.div>
-        ))}
+
+      <div className="text-center mb-4">
+        <button className="neu-button accent" onClick={onManageSubjects}>
+          + Create / Manage Subjects
+        </button>
       </div>
+
+      {builtIn.length > 0 && (
+        <>
+          <h2 className="section-label mb-2">Built-in</h2>
+          <div className="subjects-grid mb-4">
+            {builtIn.map((subject, index) => renderSubjectCard(subject, index))}
+          </div>
+        </>
+      )}
+
+      {userCreated.length > 0 && (
+        <>
+          <h2 className="section-label mb-2">Your library</h2>
+          <div className="subjects-grid">
+            {userCreated.map((subject, index) =>
+              renderSubjectCard(subject, builtIn.length + index)
+            )}
+          </div>
+        </>
+      )}
+
+      {subjects.length === 0 && (
+        <p className="text-center">No subjects yet. Create your first subject above.</p>
+      )}
     </div>
   );
-} 
+}

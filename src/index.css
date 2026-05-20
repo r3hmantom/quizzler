@@ -364,6 +364,272 @@ p {
 }
 
 /* Responsive adjustments */
+.section-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  opacity: 0.85;
+}
+
+.badge-user {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border: 2px solid var(--border-color);
+  background: var(--bg);
+}
+
+.resume-banner {
+  text-align: left;
+  padding: 1.25rem;
+}
+
+.resume-banner-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+  margin: 0 0 0.75rem;
+}
+
+.resume-banner-details {
+  margin-bottom: 0.75rem;
+}
+
+.resume-banner-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.resume-banner-key {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.7;
+  min-width: 4.5rem;
+}
+
+.resume-banner-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.resume-banner-fallback {
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.resume-banner-progress {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0 0 1rem;
+}
+
+.resume-banner-btn {
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.color-swatch {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--border-color);
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.color-swatch.selected {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
+}
+
+.library-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subject-dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid var(--border-color);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.quiz-card-inner {
+  text-align: left;
+}
+
+.quiz-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.quiz-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.quiz-status {
+  text-align: left;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  background: var(--bg-light);
+  box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.quiz-status-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 520px) {
+  .quiz-status-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quiz-status-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.quiz-status-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
+.quiz-status-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.quiz-status-sublabel {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+
+.quiz-status-score .quiz-status-value {
+  color: var(--correct);
+}
+
+.progress-labeled {
+  margin-top: 0.25rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+  gap: 0.5rem;
+}
+
+.progress-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.progress-fraction {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.skip-hint {
+  font-size: 0.8rem;
+  max-width: 11rem;
+  text-align: right;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+.result-message {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.correct-msg {
+  color: var(--correct);
+}
+
+.incorrect-msg {
+  color: var(--incorrect);
+}
+
+.action-hint {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.action-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-actions {
+  text-align: center;
+}
+
+select.neu-input {
+  cursor: pointer;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .subjects-grid, .quizzes-grid {
     grid-template-columns: 1fr;

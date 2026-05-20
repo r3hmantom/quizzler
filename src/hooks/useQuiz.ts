@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { QuizQuestion, QuizState, AnswerOption } from '../types';
-import { saveQuizState, loadQuizState, shuffleArray } from '../utils/quizUtils';
+import { QuizQuestion, QuizState, AnswerOption, QuizSessionMeta } from '../types';
+import { saveQuizState, loadQuizState, loadSessionInfo, shuffleArray, saveSessionInfo } from '../utils/quizUtils';
 
 const initialState: QuizState = {
   questions: [],
@@ -20,10 +20,13 @@ export function useQuiz() {
   useEffect(() => {
     const savedState = loadQuizState();
     if (savedState) {
-      // Ensure problematicQuestions exists
+      const sessionInfo = loadSessionInfo();
       setState({
         ...savedState,
-        problematicQuestions: savedState.problematicQuestions || []
+        problematicQuestions: savedState.problematicQuestions || [],
+        subjectName: savedState.subjectName ?? sessionInfo?.subjectName,
+        quizTitle: savedState.quizTitle ?? sessionInfo?.quizTitle,
+        quizPath: savedState.quizPath ?? sessionInfo?.quizPath,
       });
     }
   }, []);
@@ -32,6 +35,13 @@ export function useQuiz() {
   useEffect(() => {
     if (state.hasStarted) {
       saveQuizState(state);
+      if (state.subjectName && state.quizTitle) {
+        saveSessionInfo({
+          subjectName: state.subjectName,
+          quizTitle: state.quizTitle,
+          quizPath: state.quizPath,
+        });
+      }
     }
   }, [state]);
 
@@ -42,18 +52,35 @@ export function useQuiz() {
     isComplete: boolean = false,
     totalQuestionsCount?: number,
     incorrectQuestionsOverride?: QuizQuestion[],
-    problematicQuestionsOverride?: { question: QuizQuestion; incorrectCount: number }[]
+    problematicQuestionsOverride?: { question: QuizQuestion; incorrectCount: number }[],
+    sessionMeta?: QuizSessionMeta
   ) => {
     const shuffledQuestions = startIndex === 0 ? shuffleArray(questions) : questions;
-    setState({
-      questions: shuffledQuestions,
-      currentQuestionIndex: startIndex,
-      incorrectQuestions: incorrectQuestionsOverride || [],
-      problematicQuestions: problematicQuestionsOverride || [],
-      score: initialScore,
-      totalQuestions: totalQuestionsCount || questions.length,
-      isComplete: isComplete,
-      hasStarted: true
+    setState((prev) => {
+      const nextSubject = sessionMeta?.subjectName ?? prev.subjectName;
+      const nextTitle = sessionMeta?.quizTitle ?? prev.quizTitle;
+      const nextPath = sessionMeta?.quizPath ?? prev.quizPath;
+      const next = {
+        questions: shuffledQuestions,
+        currentQuestionIndex: startIndex,
+        incorrectQuestions: incorrectQuestionsOverride || [],
+        problematicQuestions: problematicQuestionsOverride || [],
+        score: initialScore,
+        totalQuestions: totalQuestionsCount || questions.length,
+        isComplete: isComplete,
+        hasStarted: true,
+        subjectName: nextSubject,
+        quizTitle: nextTitle,
+        quizPath: nextPath,
+      };
+      if (nextSubject && nextTitle) {
+        saveSessionInfo({
+          subjectName: nextSubject,
+          quizTitle: nextTitle,
+          quizPath: nextPath,
+        });
+      }
+      return next;
     });
   }, []);
 
@@ -128,12 +155,51 @@ export function useQuiz() {
     setState(initialState);
   }, []);
 
+  const skipQuestion = useCallback(() => {
+    setState((prev) => {
+      if (!prev.hasStarted || prev.isComplete) return prev;
+
+      const nextIndex = prev.currentQuestionIndex + 1;
+
+      if (nextIndex < prev.questions.length) {
+        return { ...prev, currentQuestionIndex: nextIndex };
+      }
+
+      if (prev.incorrectQuestions.length > 0) {
+        return {
+          ...prev,
+          questions: prev.incorrectQuestions,
+          currentQuestionIndex: 0,
+          incorrectQuestions: [],
+        };
+      }
+
+      return { ...prev, isComplete: true };
+    });
+  }, []);
+
+  const resumeQuiz = useCallback(() => {
+    const savedState = loadQuizState();
+    const sessionInfo = loadSessionInfo();
+    if (savedState?.hasStarted && !savedState.isComplete) {
+      setState({
+        ...savedState,
+        problematicQuestions: savedState.problematicQuestions || [],
+        subjectName: savedState.subjectName ?? sessionInfo?.subjectName,
+        quizTitle: savedState.quizTitle ?? sessionInfo?.quizTitle,
+        quizPath: savedState.quizPath ?? sessionInfo?.quizPath,
+      });
+    }
+  }, []);
+
   return {
     state,
     startQuiz,
     getCurrentQuestion,
     handleAnswer,
     checkAnswer,
-    resetQuiz
+    resetQuiz,
+    skipQuestion,
+    resumeQuiz,
   };
 } 
