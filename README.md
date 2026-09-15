@@ -1,5 +1,9 @@
 # Quizzler
 
+<p align="center">
+  <img src="docs/quizzler-cover.jpg" alt="Quizzler — Quiz & Assessment Platform" width="800" />
+</p>
+
 Interactive quiz app with a Neubrutalism look. Paste JSON questions, take the quiz with animated feedback, and pick up where you left off thanks to localStorage. Built for desktop and mobile.
 
 **Live demo:** [r3-quizzler.netlify.app](https://r3-quizzler.netlify.app/)
