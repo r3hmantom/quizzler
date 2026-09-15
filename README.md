@@ -1,53 +1,38 @@
-# Quizzler - Interactive Quiz App
+# Quizzler
 
-A modern interactive quiz application with a Neubrutalism design that accepts JSON input and features smooth animations, engaging feedback, and local storage persistence.
+Interactive quiz app with a Neubrutalism look. Paste JSON questions, take the quiz with animated feedback, and pick up where you left off thanks to localStorage. Built for desktop and mobile.
 
 ## Features
 
-- **JSON Input:** Easily import quiz questions using standard JSON format
-- **Neubrutalism Design:** Bold typography, sharp edges, and visible UI elements
-- **Interactive Feedback:** Engaging animations and feedback for correct and incorrect answers
-- **Progress Indicator:** Clear visual indication of quiz progress
-- **Re-attempt Mechanism:** Incorrectly answered questions get added to a queue for re-attempt
-- **Local Storage:** Quiz progress is saved to allow resuming after page refresh
-- **Responsive UI:** Works well on both desktop and mobile devices
+- **JSON quizzes** - Import questions in a simple JSON format
+- **Neubrutalism UI** - Bold type, hard edges, high-contrast controls
+- **Animated feedback** - Framer Motion responses for correct and incorrect answers
+- **Progress tracking** - Clear progress through the quiz
+- **Re-attempt queue** - Missed questions come back until you get them right
+- **localStorage** - Progress survives a refresh
+- **Mobile-ready** - Responsive layout for small screens
 
-## Getting Started
+## Stack
 
-### Prerequisites
+- React 19
+- Vite
+- TypeScript
+- Framer Motion
 
-- Node.js (v16.0.0 or later)
-- npm or yarn
+## Getting started
 
-### Installation
+**Prerequisites:** Node.js 18+ and npm (or yarn / pnpm)
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/quizzler.git
-   cd quizzler
-   ```
+```bash
+git clone https://github.com/r3hmantom/quizzler.git
+cd quizzler
+npm install
+npm run dev
+```
 
-2. Install dependencies:
-   ```
-   npm install
-   # or 
-   yarn
-   ```
+Open [http://localhost:5173](http://localhost:5173).
 
-3. Start the development server:
-   ```
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open your browser and navigate to `http://localhost:5173`
-
-## Usage
-
-### JSON Format
-
-Provide your quiz questions in the following JSON format:
+## Quiz JSON format
 
 ```json
 [
@@ -66,31 +51,26 @@ Provide your quiz questions in the following JSON format:
     "c": "Jupiter",
     "d": "Saturn",
     "correctAnswer": "b"
-  },
-  // ... more questions
+  }
 ]
 ```
 
-### Using the App
+## How to use
 
-1. **Start Screen:** Paste your JSON-formatted questions in the input field.
-2. **Take the Quiz:** Answer each question by selecting an option and clicking "Check Answer".
-3. **Get Feedback:** Receive immediate feedback on your answers with visual and auditory cues.
-4. **Review Mistakes:** Incorrectly answered questions will be presented again later.
-5. **See Results:** View your final score and performance after completing the quiz.
+1. Paste your JSON on the start screen.
+2. Pick an answer and check it.
+3. Review mistakes when they return in the re-attempt queue.
+4. See your score when the quiz is done.
 
-## Technology Stack
+## Scripts
 
-- React 19.0
-- TypeScript
-- Framer Motion for animations
-- Local Storage API for persistence
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Typecheck and production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Design inspired by Neubrutalism design principles
-- Quiz flow inspired by educational platforms like Duolingo
+MIT
