@@ -1,7 +1,7 @@
 # Quizzler
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/r3hmantom/quizzler/main/docs/quizzler-cover.jpg" alt="Quizzler — Quiz & Assessment Platform" width="800" />
+  <img src="https://raw.githubusercontent.com/r3hmantom/quizzler/main/docs/quizzler-cover.png" alt="Quizzler — Quiz & Assessment Platform" width="800" />
 </p>
 
 Interactive quiz app with a Neubrutalism look. Paste JSON questions, take the quiz with animated feedback, and pick up where you left off thanks to localStorage. Built for desktop and mobile.
